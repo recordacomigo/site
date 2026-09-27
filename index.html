@@ -424,7 +424,7 @@ var PIXEL_ID = "1543859487541888";  // dataset "Recorda Comigo" (BM canarimtech)
     !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = "2.0"; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v;
       s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
-    fbq("init", PIXEL_ID); fbq("track", "PageView");  // o script so carrega depois de Aceitar; revoke+grant na fila travava o init
+    fbq("init", PIXEL_ID); fbq("track", "PageView");  /* o script so carrega depois de Aceitar; revoke+grant na fila travava o init */
   }
   function mostrar() { aviso.classList.add("on"); document.body.classList.add("com-cookies"); aviso.querySelector("button").focus({ preventScroll: true }); }
   function esconder() { aviso.classList.remove("on"); document.body.classList.remove("com-cookies"); }
@@ -441,7 +441,7 @@ var PIXEL_ID = "1543859487541888";  // dataset "Recorda Comigo" (BM canarimtech)
   if (escolha === "aceite") ligarPixel();
   else if (!escolha && (PIXEL_ID || previa)) mostrar();
   // clique no botao de compra: evento so se o pixel estiver ligado com consentimento
-  document.querySelectorAll("a.cta").forEach(function (a) { a.addEventListener("click", function () { if (pixel && window.fbq) fbq("trackCustom", "CliqueComprar");  // InitiateCheckout sai da Hotmart (visitas no checkout); aqui duplicaria }); });
+  document.querySelectorAll("a.cta").forEach(function (a) { a.addEventListener("click", function () { if (pixel && window.fbq) fbq("trackCustom", "CliqueComprar"); }); });  /* InitiateCheckout sai da Hotmart (visitas no checkout); aqui duplicaria */
 })();
 </script>
 </body>

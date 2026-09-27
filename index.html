@@ -424,7 +424,7 @@ var PIXEL_ID = "1543859487541888";  // dataset "Recorda Comigo" (BM canarimtech)
     !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = "2.0"; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v;
       s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
-    fbq("consent", "revoke"); fbq("consent", "grant"); fbq("init", PIXEL_ID); fbq("track", "PageView");
+    fbq("init", PIXEL_ID); fbq("track", "PageView");  // o script so carrega depois de Aceitar; revoke+grant na fila travava o init
   }
   function mostrar() { aviso.classList.add("on"); document.body.classList.add("com-cookies"); aviso.querySelector("button").focus({ preventScroll: true }); }
   function esconder() { aviso.classList.remove("on"); document.body.classList.remove("com-cookies"); }

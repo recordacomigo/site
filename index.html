@@ -441,7 +441,7 @@ var PIXEL_ID = "1543859487541888";  // dataset "Recorda Comigo" (BM canarimtech)
   if (escolha === "aceite") ligarPixel();
   else if (!escolha && (PIXEL_ID || previa)) mostrar();
   // clique no botao de compra: evento so se o pixel estiver ligado com consentimento
-  document.querySelectorAll("a.cta").forEach(function (a) { a.addEventListener("click", function () { if (pixel && window.fbq) fbq("track", "InitiateCheckout"); }); });
+  document.querySelectorAll("a.cta").forEach(function (a) { a.addEventListener("click", function () { if (pixel && window.fbq) fbq("trackCustom", "CliqueComprar");  // InitiateCheckout sai da Hotmart (visitas no checkout); aqui duplicaria }); });
 })();
 </script>
 </body>

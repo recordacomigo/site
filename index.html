@@ -400,7 +400,16 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .carrossel:focus-v
 var CHECKOUT = "https://pay.hotmart.com/D107781573E?checkoutMode=10";
 (function () {
   if (CHECKOUT) {
-    var q = location.search.replace(/^\?/, "");
+    /* A Hotmart so guarda src e sck (descarta utm_*), e e deles que o painel liga a venda
+       ao anuncio: src = id do anuncio, sck = id da campanha. O id sai do utm_content e do
+       utm_campaign, cru ou no formato "nome|id". Sem isso a venda chega sem campanha. */
+    var p = new URLSearchParams(location.search);
+    var soId = function (v) { var m = String(v || "").match(/\d{12,}/g); return m ? m[m.length - 1] : ""; };
+    var ad = soId(p.get("utm_content")) || soId(p.get("ad_id"));
+    var camp = soId(p.get("utm_campaign")) || soId(p.get("campaign_id"));
+    if (ad && !p.get("src")) p.set("src", ad);
+    if (camp && !p.get("sck")) p.set("sck", camp);
+    var q = p.toString();
     var url = CHECKOUT + (q ? (CHECKOUT.indexOf("?") > -1 ? "&" : "?") + q : "");
     document.querySelectorAll('a.cta').forEach(function (a) { a.href = url; });
   }

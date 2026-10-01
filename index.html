@@ -56,12 +56,26 @@ h1, h2, h3 { font-family: "Fredoka", sans-serif; line-height: 1.12; margin: 0; }
 .logo img { width: 38px; height: 38px; }
 .hero h1 { font-size: 36px; margin: 14px 0 10px; color: var(--escuro); font-weight: 700; }
 .hero .sub { font-size: 18px; margin: 0 0 18px; }
-.mockup { position: relative; height: 380px; margin: 6px 0 20px; }
-.mockup .folha { position: absolute; width: 50%; border-radius: 8px; box-shadow: 0 10px 26px rgba(0,0,0,.18); background: #fff; }
-.mockup .f1 { left: 4%; top: 34px; transform: rotate(-6deg); } .mockup .f2 { right: 4%; top: 22px; transform: rotate(5deg); }
-.telemovel { position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 46%; border: 9px solid #1d2433; border-radius: 34px; overflow: hidden; box-shadow: 0 18px 40px rgba(0,0,0,.3); background: #fff; aspect-ratio: 390/760; }
-.telemovel img, .telemovel video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mockup { position: relative; margin: 6px 0 20px; }
 .selo-app { position: absolute; right: 2%; bottom: 8px; background: var(--dourado); color: #1d2433; font: 800 13px Nunito; border-radius: 30px; padding: 7px 14px; box-shadow: 0 4px 12px rgba(0,0,0,.2); }
+/* VSL do hero (30/09/2026): abre muda e em loop; o botao Ouvir reinicia do zero com som. Sem controlos (padrao da 004). */
+.vsl { position: relative; width: 64%; max-width: 300px; margin: 0 auto; aspect-ratio: 406/728; border: 8px solid #1d2433; border-radius: 30px; overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0,0,0,.3); background: #1f2d5c; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.vsl video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.vsl .barra-v { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: rgba(0,0,0,.28); z-index: 3; }
+.vsl .barra-v i { display: block; height: 100%; width: 0; background: var(--cta2); transition: width .2s linear; }
+.vsl .som { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 4; background: rgba(15,20,40,.28); transition: opacity .25s ease; border: 0; padding: 0; cursor: pointer; width: 100%; }
+.vsl.tocando .som { opacity: 0; pointer-events: none; }
+.vsl .som b { display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 6px; width: 96px; height: 96px; border-radius: 50%; background: rgba(255,255,255,.95); box-shadow: 0 10px 30px -8px rgba(0,0,0,.6); animation: pulsa 2.2s ease-in-out infinite; }
+.vsl .som svg { width: 36px; height: 36px; fill: none; stroke: #1d2433; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.vsl .som span { font: 800 12px Nunito; color: #1d2433; letter-spacing: .03em; text-transform: uppercase; }
+@keyframes pulsa { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+@media (prefers-reduced-motion: reduce) { .vsl .som b { animation: none; } }
+
+/* 7b depoimentos: prints reais, recortados no balao */
+.depos { display: flex; flex-direction: column; gap: 14px; max-width: 440px; margin: 0 auto; }
+.depos img { width: 100%; border-radius: 18px; box-shadow: 0 8px 22px rgba(0,0,0,.18); }
+.depos-nota { text-align: center; font-size: 13.5px; color: var(--suave); margin: 14px 0 0; }
 .garant-mini { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; font-size: 13.5px; color: var(--suave); font-weight: 800; margin: 10px 0 0; }
 
 /* 1b faixa */
@@ -179,7 +193,9 @@ footer button.pref { background: none; border: 0; color: #d7dcf0; text-decoratio
 a:focus-visible, button:focus-visible, summary:focus-visible, .carrossel:focus-visible { outline: 3px solid #1f2d5c; outline-offset: 3px; }
 .garantia a:focus-visible, .faq summary:focus-visible { outline-color: #f2b631; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .barra { transition: none; } }
-@media (min-width: 700px) { .hero h1 { font-size: 44px; } .mockup { height: 460px; } }
+@media (min-width: 700px) { .hero h1 { font-size: 44px; } }
+/* telemovel: a VSL tem de caber inteira na primeira dobra */
+@media (max-width: 400px) { .hero h1 { font-size: 29px; margin: 10px 0 8px; } .hero .sub { font-size: 16px; margin: 0 0 12px; } .logo { margin-bottom: 8px; } .mockup { margin: 4px 0 16px; } }
 </style>
 </head>
 <body>
@@ -192,10 +208,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .carrossel:focus-v
   <h1><span class="rosa">360</span> atividades para estimular a <span class="rosa">memória, a atenção e o raciocínio</span></h1>
   <p class="sub">Atividades simples de <b class="rosa">15 minutos por dia</b>, para fazer no telemóvel ou imprimir. Para a família e para quem cuida.</p>
   <div class="mockup">
-    <img class="folha f1" src="img/folha-linguagem-1.jpg" alt="Ficha de sopa de letras">
-    <img class="folha f2" src="img/folha-orientacao-1.jpg" alt="Ficha de relógios">
-    <div class="telemovel"><video src="img/demo-app.mp4" poster="img/demo-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="O Recorda Comigo a funcionar no telemóvel"></video></div>
-    <span class="selo-app">📱 Também no telemóvel</span>
+    <div class="vsl" data-vsl>
+      <video src="img/vsl.mp4" poster="img/vsl-poster.jpg" width="406" height="728" autoplay muted loop playsinline preload="metadata" aria-label="Vídeo: o Recorda Comigo por dentro, em pouco mais de um minuto"></video>
+      <div class="barra-v"><i></i></div>
+      <button class="som" type="button" aria-label="Ver o vídeo com som, desde o início"><b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M19 6a8 8 0 0 1 0 12"/></svg><span>Ouvir</span></b></button>
+    </div>
   </div>
   <a class="cta" href="https://pay.hotmart.com/D107781573E?checkoutMode=10">Quero as 360 atividades</a>
   <p class="garant-mini"><span>✓ Acesso imediato</span><span>✓ Pagamento único</span><span>✓ 15 dias para experimentar</span></p>
@@ -313,7 +330,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .carrossel:focus-v
   </div>
 </section>
 
-<!-- 7. PARA QUEM E (no lugar dos depoimentos: so entram prints reais, quando existirem) -->
+<!-- 7. PARA QUEM E -->
 <section class="secao">
   <div class="w">
     <h2>Para quem é o Recorda Comigo</h2>
@@ -323,6 +340,22 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .carrossel:focus-v
       <div class="qm"><img width="256" height="256" loading="lazy" decoding="async" src="img/cuidadora.png" alt=""><div><b>Cuidadores e animadores</b><span>Sessões prontas para o lar, o centro de dia ou o apoio domiciliário.</span></div></div>
       <div class="qm"><img width="256" height="256" loading="lazy" decoding="async" src="img/avo.png" alt=""><div><b>Quem quer manter a mente ativa</b><span>Os Níveis 2 e 3 são um bom desafio, mesmo sem problemas de memória.</span></div></div>
     </div>
+  </div>
+</section>
+
+<!-- 7b. DEPOIMENTOS: prints reais de quem testou com acesso oferecido antes do lancamento (30/09/2026) -->
+<section class="rosado">
+  <div class="w">
+    <h2 style="text-align:center">O que nos dizem as famílias</h2>
+    <p style="text-align:center">Antes de abrirmos as vendas, pedimos a algumas famílias que experimentassem. Foi isto que nos mandaram.</p>
+    <div class="depos">
+      <img width="700" height="431" loading="lazy" decoding="async" src="img/depo-1.jpg" alt="Mensagem: O meu sogro no início resmungou que aquilo era coisa de criança, mas agora já pede para eu lhe pôr a app. Diz que lhe puxa pela cabeça. Estamos contentes, obrigada pela dica!">
+      <img width="700" height="478" loading="lazy" decoding="async" src="img/depo-2.jpg" alt="Mensagem: A minha mãe tem usado todos os dias, ela agora conta-me os joguinhos quando falamos ao telefone. Tem andado mais animada, desde que o meu pai faleceu que não a ouvia assim.">
+      <img width="700" height="473" loading="lazy" decoding="async" src="img/depo-3.jpg" alt="Mensagem: Tenho usado a app com a D. Lurdes e tem sido ótimo, ela fica entretida um bom bocado e eu consigo tratar das minhas coisas. Hoje até se lembrou do nome da vizinha que já não se lembrava há semanas.">
+      <img width="700" height="401" loading="lazy" decoding="async" src="img/depo-4.jpg" alt="Mensagem: O meu pai que não queria nada com tecnologia agora está sempre agarrado ao tablet. A minha mulher já se queixa que ele nem ouve quando o chamam pra jantar.">
+      <img width="700" height="371" loading="lazy" decoding="async" src="img/depo-5.jpg" alt="Mensagem: A minha mãe está a adorar a app. Ontem ligou-me às 10 da noite só para dizer que tinha passado o nível dos cartões, nem queria acreditar. Obrigada a sério.">
+    </div>
+    <p class="depos-nota">Mensagens reais, enviadas por quem recebeu o acesso para experimentar. Cada pessoa tem o seu ritmo.</p>
   </div>
 </section>
 
@@ -451,6 +484,31 @@ var PIXEL_ID = "1543859487541888";  // dataset "Recorda Comigo" (BM canarimtech)
   else if (!escolha && (PIXEL_ID || previa)) mostrar();
   // clique no botao de compra: evento so se o pixel estiver ligado com consentimento
   document.querySelectorAll("a.cta").forEach(function (a) { a.addEventListener("click", function () { if (pixel && window.fbq) fbq("trackCustom", "CliqueComprar"); }); });  /* InitiateCheckout sai da Hotmart (visitas no checkout); aqui duplicaria */
+})();
+</script>
+<script>
+/* VSL do hero, padrao da 004: abre muda em loop, sem controlos; o botao Ouvir reinicia do zero com som e toca uma vez ate ao fim. */
+(function () {
+  document.querySelectorAll("[data-vsl]").forEach(function (box) {
+    var v = box.querySelector("video");
+    var fill = box.querySelector(".barra-v i");
+    var botao = box.querySelector(".som");
+    var somOn = false;
+    v.addEventListener("pause", function () { if (!v.ended) v.play().catch(function () {}); });
+    v.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+    v.addEventListener("timeupdate", function () { if (v.duration) fill.style.width = (v.currentTime / v.duration * 100) + "%"; });
+    v.addEventListener("ended", function () { somOn = false; box.classList.remove("tocando"); v.muted = true; v.loop = true; v.currentTime = 0; v.play().catch(function () {}); });
+    botao.addEventListener("click", function () {
+      if (somOn) return;
+      somOn = true;
+      box.classList.add("tocando");
+      v.loop = false;
+      v.muted = false;
+      v.currentTime = 0;
+      v.play().catch(function () { v.muted = true; v.loop = true; somOn = false; box.classList.remove("tocando"); v.play().catch(function () {}); });
+      if (window.fbq) { try { fbq("trackCustom", "VSLOuvir"); } catch (e) {} }
+    });
+  });
 })();
 </script>
 </body>

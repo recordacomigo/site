@@ -33,5 +33,7 @@ li span{font-size:24px;line-height:1.1}li b{color:var(--c)}
 <p class="pq rod"><a href="termos.html">Termos</a> · <a href="privacidade.html">Privacidade</a></p></main><script>var CK = "https://pay.hotmart.com/G107949780A"; document.querySelectorAll("[data-checkout]").forEach(function (a) {
   var q = location.search.replace(/^\?/, "").split("&").filter(function (p) { return p && p.indexOf("pos=") !== 0; }).join("&");
   a.href = CK + (q ? "?" + q : ""); });
+var q2 = location.search.replace(/^\?/, "").split("&").filter(function (p) { return p && p.indexOf("pos=") !== 0; }).join("&");
+if (q2) document.querySelectorAll("[data-segue]").forEach(function (a) { a.href += (a.href.indexOf("?") > -1 ? "&" : "?") + q2; });
 if (/[?&]pos=1/.test(location.search)) document.querySelectorAll("[data-fluxo]").forEach(function (e) { e.hidden = false; });
 else document.querySelectorAll("[data-fora]").forEach(function (e) { e.hidden = false; });</script></body></html>

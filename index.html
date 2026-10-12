@@ -174,16 +174,6 @@ footer { background: #151f42; color: #aeb7d3; font-size: 13.5px; text-align: cen
 footer a { color: #d7dcf0; margin: 0 8px; }
 
 
-/* aviso de cookies: rejeitar e aceitar com o mesmo destaque; nao bloqueia a pagina */
-.cookies { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 20; background: #fff; border-radius: 18px; box-shadow: 0 10px 40px rgba(0,0,0,.25); padding: 16px; max-width: 520px; margin: 0 auto; display: none; }
-.cookies.on { display: block; }
-.cookies h2 { font: 700 18px Fredoka; color: var(--escuro); margin: 0 0 6px; }
-.cookies p { margin: 0 0 12px; font-size: 15px; color: var(--tinta); }
-.cookies p a { color: var(--escuro); font-weight: 800; }
-.cookies .bts { display: flex; gap: 10px; }
-.cookies .bts button { flex: 1; font: 800 16px Nunito; padding: 13px 10px; border-radius: 14px; border: 2px solid var(--escuro); background: var(--escuro); color: #fff; cursor: pointer; }
-body.com-cookies .barra { transform: translateY(110%) !important; }
-footer button.pref { background: none; border: 0; color: #d7dcf0; text-decoration: underline; font: inherit; cursor: pointer; padding: 0; margin: 0 8px; }
 
 /* barra fixa */
 .barra { position: fixed; left: 0; right: 0; bottom: 0; background: #fff; box-shadow: 0 -6px 20px rgba(0,0,0,.12); padding: 10px 14px; display: flex; align-items: center; gap: 12px; transform: translateY(110%); transition: transform .3s; z-index: 9; }
@@ -462,18 +452,13 @@ body.pacm-on { overflow: hidden; }
 <!-- 11. RODAPE -->
 <footer>
   <p>Este produto não substitui o parecer de um profissional de saúde. Em assuntos de saúde, consulta sempre o teu médico.</p>
-  <p><a href="termos.html">Termos de utilização</a><a href="privacidade.html">Política de privacidade</a><button type="button" class="pref">Definições de cookies</button></p>
+  <p><a href="termos.html">Termos de utilização</a><a href="privacidade.html">Política de privacidade</a></p>
   <p><a href="termos.html#vendedor">Quem vende</a><a href="termos.html#desistir">Desistir da compra</a></p>
   <p>© 2026 Recorda Comigo · Pagamento processado pela Hotmart B.V., agente do vendedor</p>
 </footer>
 
 
-<!-- aviso de cookies (so aparece quando o pixel esta configurado; pre-visualizar com ?cookies=ver) -->
-<div class="cookies" role="dialog" aria-labelledby="ck-t" aria-describedby="ck-d">
-  <h2 id="ck-t">Cookies</h2>
-  <p id="ck-d">Com a tua autorização, usamos o Pixel da Meta (Meta Platforms Ireland, com dados que podem seguir para os EUA) para perceber que anúncios trazem visitas e compras e para mostrar publicidade no Facebook e no Instagram. Nada é ativado antes de aceitares, e podes retirar a autorização em "Definições de cookies", no fundo da página. <a href="privacidade.html#cookies">Saber mais</a></p>
-  <div class="bts"><button type="button" data-ck="rejeitado">Rejeitar</button><button type="button" data-ck="aceite">Aceitar</button></div>
-</div>
+
 
 <!-- barra fixa -->
 <div class="pacm" role="dialog" aria-modal="true" aria-labelledby="pacm-t"><div class="folha">
@@ -526,37 +511,21 @@ var PACOTES = { essencial: CHECKOUT, diadia: "https://pay.hotmart.com/G107996572
   addEventListener("scroll", function () { barra.classList.toggle("on", scrollY > 600 && !nosPacotes); }, { passive: true });
 })();
 
-/* Pixel do Meta com consentimento previo (Lei 41/2004 art. 5.o e orientacoes da CNPD/EDPB):
-   nada de rastreio antes de "Aceitar". A escolha fica 6 meses no aparelho. */
+/* Pixel do Meta: carrega ao abrir a pagina, SEM aviso de cookies (Vini, 12/10/2026, "so para a gente testar": o aviso
+   escondia ~60% das visitas no painel). Risco registado no log da oferta: a Lei 41/2004 (art. 5.o) pede consentimento
+   previo. Para voltar ao aviso, reverter este commit no recordacomigo/site. */
 var PIXEL_ID = "1543859487541888";  // dataset "Recorda Comigo" (BM canarimtech), 26/09/2026
 (function () {
-  var CHAVE = "rc-cookies", SEIS_MESES = 182 * 24 * 3600 * 1000;
-  var aviso = document.querySelector(".cookies");
-  var ler = function () { try { var x = JSON.parse(localStorage.getItem(CHAVE) || "null"); return x && Date.now() - x.t < SEIS_MESES ? x.v : null; } catch (e) { return null; } };
-  var gravar = function (v) { try { localStorage.setItem(CHAVE, JSON.stringify({ v: v, t: Date.now() })); } catch (e) {} };
   var pixel = false;
   function ligarPixel() {
     if (pixel || !PIXEL_ID) return; pixel = true;
     !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = "2.0"; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v;
       s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
-    fbq("init", PIXEL_ID); fbq("track", "PageView");  /* o script so carrega depois de Aceitar; revoke+grant na fila travava o init */
+    fbq("init", PIXEL_ID); fbq("track", "PageView");
   }
-  function mostrar() { aviso.classList.add("on"); document.body.classList.add("com-cookies"); aviso.querySelector("button").focus({ preventScroll: true }); }
-  function esconder() { aviso.classList.remove("on"); document.body.classList.remove("com-cookies"); }
-  aviso.querySelectorAll("[data-ck]").forEach(function (b) {
-    b.addEventListener("click", function () {
-      var v = b.getAttribute("data-ck"); gravar(v); esconder();
-      if (v === "aceite") ligarPixel(); else if (pixel) location.reload();  // retirar o consentimento para o pixel ja carregado
-    });
-  });
-  document.querySelector("footer .pref").addEventListener("click", function () { if (pixel && window.fbq) fbq("consent", "revoke"); mostrar(); });
-  var previa = /[?&]cookies=ver/.test(location.search);
-  if (!PIXEL_ID && !previa) document.querySelector("footer .pref").style.display = "none";
-  var escolha = ler();
-  if (escolha === "aceite") ligarPixel();
-  else if (!escolha && (PIXEL_ID || previa)) mostrar();
-  // clique no botao de compra: evento so se o pixel estiver ligado com consentimento
+  ligarPixel();
+  // clique no pacote: evento proprio (o InitiateCheckout e da Hotmart)
   document.querySelectorAll("a[data-pac]").forEach(function (a) { a.addEventListener("click", function () { if (pixel && window.fbq) fbq("trackCustom", "CliqueComprar", { pacote: a.getAttribute("data-pac") }); }); });  /* InitiateCheckout sai da Hotmart (visitas no checkout); aqui duplicaria */
 })();
 </script>

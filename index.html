@@ -217,7 +217,33 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .carrossel:focus-v
 @media (min-width: 700px) { .pacm { align-items: center; } .pacm .folha { border-radius: 24px; } }
 .pacm .tt { display: flex; align-items: center; justify-content: space-between; margin: 0 0 18px; } .pacm .tt h2 { font: 700 24px Fredoka; margin: 0; color: var(--escuro); }
 .pacm .x { border: 0; background: #ece6dd; width: 40px; height: 40px; border-radius: 50%; font-size: 18px; cursor: pointer; flex: none; }
-.pacm .pac { padding: 18px 14px 14px; } .pacm .pac li { font-size: 15px; padding: 2px 0; } .pacm .pac ul { margin-bottom: 12px; }
+/* a janela mostra os 3 pacotes INTEIROS no ecra, sem rolar, no telemovel e no computador (Vini, 12/10/2026: o Essencial
+   ficava abaixo da dobra e quem queria o de 14,90 podia desistir sem o ver). O Completo continua o cartao grande, em cima;
+   Dia a Dia e Essencial viram uma faixa com o preco e o botao ao lado. Medido: cabe em 360x560 */
+.pacm .folha { max-height: 92vh; max-height: 96dvh; padding: 12px 14px 14px; }
+.pacm .tt { margin: 0 0 14px; } .pacm .tt h2 { font-size: 21px; } .pacm .x { width: 36px; height: 36px; font-size: 16px; }
+.pacm .pacotes { gap: 10px; }
+.pacm .pac { padding: 12px 14px; border-radius: 18px; }
+.pacm .pac.top { padding-top: 16px; }
+.pacm .pac .tag { top: -11px; font-size: 11.5px; padding: 3px 10px; }
+.pacm .pac h3 { font-size: 22px; } .pacm .pac .pv { font-size: 28px; }
+.pacm .pac ul { margin: 6px 0 10px; } .pacm .pac li { font-size: 14.5px; line-height: 1.3; padding: 2px 0; }
+.pacm .pac.top .bt { padding: 13px; font-size: 18px; }
+.pacm .pac.lin { display: flex; align-items: center; gap: 12px; }
+.pacm .pac.lin .info { flex: 1; min-width: 0; }
+.pacm .pac.lin h3 { font-size: 20px; }
+.pacm .pac.lin .ds { margin: 3px 0 0; font-size: 14px; line-height: 1.3; }
+.pacm .pac.lin .acao { flex: none; text-align: center; }
+.pacm .pac.lin .pv { font-size: 22px; text-align: center; margin-bottom: 6px; }
+.pacm .pac.lin .bt { padding: 11px 18px; font-size: 16px; }
+.pacm .pac-rod { font-size: 12.5px; margin: 10px 0 0; }
+/* telemovel baixo (iPhone SE com as barras do Safari, Android de 640): aperta os espacos para o rodape caber tambem */
+@media (max-height: 620px) {
+  .pacm .folha { padding-top: 10px; } .pacm .tt { margin-bottom: 12px; } .pacm .tt h2 { font-size: 19px; }
+  .pacm .pacotes { gap: 8px; } .pacm .pac { padding: 10px 12px; } .pacm .pac.top { padding-top: 14px; }
+  .pacm .pac ul { margin: 4px 0 8px; } .pacm .pac li { font-size: 14px; padding: 1px 0; } .pacm .pac.top .bt { padding: 11px; }
+  .pacm .pac.lin .pv { font-size: 20px; margin-bottom: 4px; } .pacm .pac.lin .bt { padding: 9px 16px; } .pacm .pac-rod { margin-top: 8px; }
+}
 @keyframes pacm-sobe { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
 body.pacm-on { overflow: hidden; }
 </style>
@@ -463,10 +489,10 @@ body.pacm-on { overflow: hidden; }
 <!-- barra fixa -->
 <div class="pacm" role="dialog" aria-modal="true" aria-labelledby="pacm-t"><div class="folha">
   <div class="tt"><h2 id="pacm-t">Escolhe o teu kit</h2><button class="x" type="button" aria-label="Fechar">✕</button></div>
-  <div class="pacotes"><div class="pac top"><span class="tag">O MAIS COMPLETO</span><div class="cab"><h3>Completo</h3><div class="pv">34,90 €<small>pagamento único</small></div></div>
-<p class="ds">Para a cabeça, o corpo, as memórias e as festas do ano.</p><ul><li>Os 8 cadernos e os 5 bónus do kit</li><li>Plano de 90 Dias e Jogos para Jogar Juntos</li><li>Corpo Ativo e Memórias da Época</li><li><span><b>+5 bónus exclusivos:</b> Festas do Ano, O Livro da Minha Vida e mais</span></li></ul><a class="bt" data-pac="completo" href="https://pay.hotmart.com/U107996632D">Quero o Completo</a></div><div class="pac"><div class="cab"><h3>Dia a Dia</h3><div class="pv">24,90 €<small>pagamento único</small></div></div>
-<p class="ds">O kit, o plano de cada dia e os jogos para jogar juntos.</p><ul><li>Os 8 cadernos e os 5 bónus do kit</li><li>Plano de 90 Dias e Jogos para Jogar Juntos</li></ul><a class="bt" data-pac="diadia" href="https://pay.hotmart.com/G107996572P">Quero o Dia a Dia</a></div><div class="pac"><div class="cab"><h3>Essencial</h3><div class="pv">14,90 €<small>pagamento único</small></div></div>
-<p class="ds">Os 8 cadernos e os 5 bónus, para começar.</p><ul><li>Os 8 cadernos e os 5 bónus do kit</li></ul><a class="bt" data-pac="essencial" href="https://pay.hotmart.com/D107781573E?checkoutMode=10">Quero o Essencial</a></div></div>
+  <div class="pacotes"><div class="pac top"><span class="tag">O MAIS COMPLETO</span><div class="cab"><h3>Completo</h3><div class="pv">34,90 €</div></div>
+<ul><li>Os 8 cadernos e os 5 bónus do kit</li><li>Plano de 90 Dias, Jogos, Corpo Ativo e Memórias</li><li><span><b>+5 bónus exclusivos:</b> Festas do Ano e mais</span></li></ul><a class="bt" data-pac="completo" href="https://pay.hotmart.com/U107996632D">Quero o Completo</a></div>
+<div class="pac lin"><div class="info"><h3>Dia a Dia</h3><p class="ds">O kit, o Plano de 90 Dias e os Jogos</p></div><div class="acao"><div class="pv">24,90 €</div><a class="bt" data-pac="diadia" href="https://pay.hotmart.com/G107996572P">Escolher</a></div></div>
+<div class="pac lin"><div class="info"><h3>Essencial</h3><p class="ds">Os 8 cadernos e os 5 bónus do kit</p></div><div class="acao"><div class="pv">14,90 €</div><a class="bt" data-pac="essencial" href="https://pay.hotmart.com/D107781573E?checkoutMode=10">Escolher</a></div></div></div>
   <p class="pac-rod">Pagamento único · MB WAY, Multibanco ou cartão · 15 dias para experimentar</p>
 </div></div>
 

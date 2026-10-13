@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Recorda Comigo · 360 atividades para manter a mente ativa</title>
-<meta name="description" content="360 atividades de estimulação cognitiva para fazer no telemóvel ou imprimir. Memória, atenção e raciocínio, 15 minutos por dia.">
-<meta name="theme-color" content="#1f2d5c">
+<title>Recorda Comigo · 360 atividades para exercitar a memória</title>
+<meta name="description" content="360 atividades para exercitar a memória, a atenção e o raciocínio. Prontas a usar em casa ou no lar, 15 minutos por dia, no telemóvel ou em papel.">
+<meta name="theme-color" content="#1e3a5f">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<meta property="og:title" content="Recorda Comigo · 360 atividades para manter a mente ativa">
-<meta property="og:description" content="Atividades simples de 15 minutos por dia, no telemóvel ou em PDF para imprimir.">
-<meta property="og:image" content="https://recordacomigo.github.io/site/img/capa-geral.jpg">
+<meta property="og:title" content="Recorda Comigo · 360 atividades para exercitar a memória">
+<meta property="og:description" content="Prontas a usar em casa ou no lar, 15 minutos por dia, no telemóvel ou em papel.">
+<meta property="og:image" content="https://recordacomigo.github.io/site/img/foto-folhas-mesa.jpg">
 <meta property="og:url" content="https://recordacomigo.github.io/site/">
 <meta property="og:type" content="product">
 <meta property="og:locale" content="pt_PT">
@@ -21,228 +21,229 @@
 <link rel="canonical" href="https://recordacomigo.github.io/site/">
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Product", "name": "Recorda Comigo",
- "description": "Kit de 360 atividades de estimulação cognitiva para fazer no telemóvel ou imprimir: memória, atenção e raciocínio, 15 minutos por dia.",
- "image": "https://recordacomigo.github.io/site/img/capa-geral.jpg", "brand": {"@type": "Brand", "name": "Recorda Comigo"},
+ "description": "360 atividades para exercitar a memória, a atenção e o raciocínio, no telemóvel ou em PDF para imprimir.",
+ "image": "https://recordacomigo.github.io/site/img/foto-folhas-mesa.jpg", "brand": {"@type": "Brand", "name": "Recorda Comigo"},
  "offers": {"@type": "Offer", "price": "14.90", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://recordacomigo.github.io/site/"}}
 </script>
-<!-- PIXEL META e UTM: entram na funil-montar (C), antes de ligar o checkout -->
-<link rel="preload" href="fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/fredoka-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-@font-face { font-family: 'Fredoka'; font-style: normal; font-weight: 500 700; font-display: swap; src: url(fonts/fredoka-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-@font-face { font-family: 'Fredoka'; font-style: normal; font-weight: 500 700; font-display: swap; src: url(fonts/fredoka-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-@font-face { font-family: 'Nunito'; font-style: normal; font-weight: 500 900; font-display: swap; src: url(fonts/nunito-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-@font-face { font-family: 'Nunito'; font-style: normal; font-weight: 500 900; font-display: swap; src: url(fonts/nunito-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-:root { --escuro: #1f2d5c; --escuro2: #28397a; --tinta: #1d2433; --suave: #5d6878; --fundo: #fffaf4; --rosado: #fbeee9;
-        --cta: #e8573f; --cta2: #d94468; --rosa-txt: #b52f55; --verde: #2e9460; --azul: #2f7fb8; --dourado: #f2b631; }
+/* LP v2 (13/10/2026): visual ADULTO e editorial, a pedido do Vini ("muito infantil"). Sem emoji, sem icone 3D, sem
+   cartoes arco-iris. Titulos em serifada (Lora), texto em Inter, fotos reais, uma cor de destaque (terracota).
+   Fontes servidas pelo proprio site (sem Google Fonts: privacidade na UE). */
+@font-face { font-family: 'Lora'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/lora-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Lora'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/lora-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Lora'; font-style: italic; font-weight: 400 700; font-display: swap; src: url(fonts/lora-italic-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/inter-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/inter-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+:root { --azul: #1e3a5f; --azul2: #2c4f7c; --azul-claro: #e9eef5; --creme: #f7f3eb; --papel: #fffdf9; --linha: #e5ddd0;
+        --tinta: #1c2430; --suave: #5c6470; --cta: #b5472e; --cta-esc: #963921; --verde: #2f6e4f; --vermelho: #a8432f; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; overflow-x: hidden; }
 html, body { max-width: 100%; overflow-x: clip; }
-body { margin: 0; font-family: "Nunito", system-ui, sans-serif; color: var(--tinta); background: var(--fundo); font-size: 17px; line-height: 1.5; }
+body { margin: 0; font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--tinta); background: var(--creme); font-size: 17.5px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 img { max-width: 100%; height: auto; display: block; }
-.w { max-width: 560px; margin: 0 auto; padding: 0 18px; }
-h1, h2, h3 { font-family: "Fredoka", sans-serif; line-height: 1.12; margin: 0; }
-.rosa { color: var(--cta2); } .sub .rosa, .num, .pills span { color: var(--rosa-txt) !important; } .dour { color: var(--dourado); }
-.pilula { display: inline-flex; align-items: center; gap: 8px; border: 2px solid var(--rosa-txt); color: var(--rosa-txt); border-radius: 30px; padding: 6px 16px; font: 800 13px Nunito; letter-spacing: .04em; }
-.pilula::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--cta2); }
-.chapeu { display: inline-block; font: 800 13px Nunito; letter-spacing: .08em; color: #a3294c; background: #fde6ea; border-radius: 20px; padding: 5px 14px; }
-.cta { display: block; text-align: center; text-decoration: none; color: #fff; background: linear-gradient(180deg, #f06a4a, var(--cta2)); font: 800 20px "Fredoka"; letter-spacing: .02em; padding: 18px 16px; border-radius: 18px; box-shadow: 0 8px 22px rgba(217,68,104,.35), 0 4px 0 #b8354f; text-transform: uppercase; }
-.cta.verde { background: linear-gradient(180deg, #2f9a60, #237a4b); box-shadow: 0 8px 22px rgba(46,148,96,.3), 0 4px 0 #1f7349; }
-.seguro { text-align: center; font-size: 14px; color: var(--suave); margin: 10px 0 0; font-weight: 700; }
+.w { max-width: 600px; margin: 0 auto; padding: 0 20px; }
+h1, h2, h3 { font-family: "Lora", Georgia, serif; font-weight: 600; line-height: 1.18; margin: 0; color: var(--azul); letter-spacing: -.005em; }
+h1 em, h2 em { font-style: italic; color: var(--cta); }
+h2 { font-size: 30px; margin-bottom: 14px; }
+p { margin: 0 0 14px; }
+.rotulo { display: block; font-size: 13px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--azul2); margin-bottom: 10px; }
+.sec { padding: 52px 0; }
+.sec.papel { background: var(--papel); border-top: 1px solid var(--linha); border-bottom: 1px solid var(--linha); }
+.foto { border-radius: 14px; overflow: hidden; box-shadow: 0 18px 40px -22px rgba(28,36,48,.45); margin: 4px 0 22px; }
+.foto img { width: 100%; }
+.ico { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+/* botao: frase normal, nao CAIXA ALTA */
+.cta { display: block; text-align: center; text-decoration: none; color: #fff; background: var(--cta); font: 600 19px/1.2 "Inter", sans-serif; padding: 18px 20px;
+       border-radius: 12px; box-shadow: 0 10px 24px -10px rgba(150,57,33,.7); transition: background .15s; }
+.cta:hover { background: var(--cta-esc); }
+.cta-bloco { margin-top: 26px; }
+.garante { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 16px; margin: 12px 0 0; padding: 0; list-style: none; font-size: 14px; color: var(--suave); }
+.garante li { display: flex; align-items: center; gap: 6px; }
+.garante .ico { width: 16px; height: 16px; color: var(--verde); stroke-width: 2.4; }
+.checks { list-style: none; padding: 0; margin: 0 0 6px; }
+.checks li { display: flex; gap: 12px; align-items: flex-start; padding: 7px 0; }
+.checks .ico { width: 20px; height: 20px; color: var(--verde); stroke-width: 2.4; margin-top: 4px; }
 
 /* 1 hero */
-.topo { text-align: center; padding: 18px 18px 8px; }
-.logo { display: inline-flex; align-items: center; gap: 8px; font: 700 22px Fredoka; color: var(--escuro); margin-bottom: 12px; }
-.logo img { width: 38px; height: 38px; }
-.hero h1 { font-size: 36px; margin: 14px 0 10px; color: var(--escuro); font-weight: 700; }
-.hero .sub { font-size: 18px; margin: 0 0 18px; }
-.mockup { position: relative; margin: 6px 0 20px; }
-.selo-app { position: absolute; right: 2%; bottom: 8px; background: var(--dourado); color: #1d2433; font: 800 13px Nunito; border-radius: 30px; padding: 7px 14px; box-shadow: 0 4px 12px rgba(0,0,0,.2); }
-/* VSL do hero (30/09/2026): abre muda e em loop; o botao Ouvir reinicia do zero com som. Sem controlos (padrao da 004). */
-.vsl { position: relative; width: 64%; max-width: 300px; margin: 0 auto; aspect-ratio: 406/728; border: 8px solid #1d2433; border-radius: 30px; overflow: hidden;
-  box-shadow: 0 18px 40px rgba(0,0,0,.3); background: #1f2d5c; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.cabeca { text-align: center; padding: 14px 20px 0; }
+.marca { font: 600 21px "Lora", serif; color: var(--azul); letter-spacing: .01em; }
+.hero { text-align: center; padding: 14px 20px 34px; }
+.hero .rotulo { margin: 14px 0 8px; letter-spacing: .06em; font-size: 12.5px; }
+.hero h1 { font-size: 31px; margin: 0 auto 10px; max-width: 520px; }
+.hero .sub { color: var(--suave); font-size: 17px; margin: 0 auto 18px; max-width: 460px; }
+
+/* VSL do hero (padrao da 004): abre muda e em loop; o botao Ouvir reinicia do zero com som; com som, toque pausa e
+   continua e o botao do canto silencia e religa. Avancar e voltar continuam travados. */
+/* moldura de telemovel (a mesma da VSL v10 da 004, em grafite): borda escura, ilha numa faixa preta ACIMA do video
+   (em cima do video cobria o titulo dele) e botoes laterais. Sem animacao de flutuar: atrapalha assistir. */
+.fone { position: relative; width: min(286px, 62vw); margin: 0 auto 22px; padding: 7px; border-radius: 40px;
+  background: linear-gradient(150deg, #3d434c 0%, #15181d 45%, #0c0e11 70%, #2c3038 100%);
+  box-shadow: 0 30px 60px -26px rgba(12,16,24,.85), 0 0 0 1px rgba(0,0,0,.55), inset 0 0 0 1.5px rgba(255,255,255,.12); }
+.fone::before, .fone::after { content: ''; position: absolute; width: 3px; border-radius: 2px; background: linear-gradient(90deg, #2c3038, #4a505a); }
+.fone::before { right: -3px; top: 24%; height: 11%; }
+.fone::after { left: -3px; top: 19%; height: 15%; }
+.fone .tela { position: relative; border-radius: 33px; overflow: hidden; background: #000; padding-top: 22px; }
+.fone .ilha { position: absolute; top: 5px; left: 50%; transform: translateX(-50%); width: 27%; height: 13px; border-radius: 20px; background: #1a1a1a;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.05); z-index: 6; pointer-events: none; }
+.vsl { position: relative; width: 100%; aspect-ratio: 406/728; overflow: hidden; background: var(--azul); cursor: pointer; -webkit-tap-highlight-color: transparent; }
 .vsl video { width: 100%; height: 100%; object-fit: cover; display: block; }
-.vsl .barra-v { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: rgba(0,0,0,.28); z-index: 3; }
-.vsl .barra-v i { display: block; height: 100%; width: 0; background: var(--cta2); transition: width .2s linear; }
-.vsl .som { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 4; background: rgba(15,20,40,.28); transition: opacity .25s ease; border: 0; padding: 0; cursor: pointer; width: 100%; }
+.vsl .barra-v { position: absolute; left: 14px; right: 14px; bottom: 8px; height: 4px; border-radius: 4px; overflow: hidden; background: rgba(255,255,255,.35); z-index: 3; }
+.vsl .barra-v i { display: block; height: 100%; width: 0; background: #fff; transition: width .2s linear; }
+.vsl .som { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 4; background: rgba(20,28,45,.25); transition: opacity .25s ease; border: 0; padding: 0; cursor: pointer; width: 100%; }
 .vsl.tocando .som { opacity: 0; pointer-events: none; }
-.vsl .som b { display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 6px; width: 96px; height: 96px; border-radius: 50%; background: rgba(255,255,255,.95); box-shadow: 0 10px 30px -8px rgba(0,0,0,.6); animation: pulsa 2.2s ease-in-out infinite; }
-.vsl .som svg { width: 36px; height: 36px; fill: none; stroke: #1d2433; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.vsl .som span { font: 800 12px Nunito; color: #1d2433; letter-spacing: .03em; text-transform: uppercase; }
-@keyframes pulsa { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
-@media (prefers-reduced-motion: reduce) { .vsl .som b { animation: none; } }
+.vsl .som b { display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 4px; width: 92px; height: 92px; border-radius: 50%; background: rgba(255,253,249,.96); box-shadow: 0 10px 30px -8px rgba(0,0,0,.6); }
+.vsl .som svg { width: 32px; height: 32px; fill: none; stroke: var(--azul); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.vsl .som span { font: 600 12px "Inter"; color: var(--azul); letter-spacing: .06em; text-transform: uppercase; }
+.vsl .pausa { position: absolute; inset: 0; z-index: 4; display: none; align-items: center; justify-content: center; background: rgba(20,28,45,.38); }
+.vsl.pausado .pausa { display: flex; }
+.vsl .pausa b { display: flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: 50%; background: rgba(255,253,249,.96); }
+.vsl .pausa svg { width: 28px; height: 28px; margin-left: 5px; fill: var(--azul); }
+/* o botao de som fica logo ABAIXO da faixa de titulo do video (12% da altura): no topo tapava a headline, no rodape a legenda */
+.vsl .mudo { position: absolute; right: 8px; top: calc(12% + 8px); z-index: 5; width: 34px; height: 34px; padding: 0; border: 0; border-radius: 50%; background: rgba(20,28,45,.62); display: none; align-items: center; justify-content: center; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.vsl.tocando .mudo { display: flex; }
+.vsl .mudo svg { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.vsl .mudo .x { display: none; } .vsl.sem-som .mudo .x { display: inline; } .vsl.sem-som .mudo .ondas { display: none; }
+.vsl .mudo:focus-visible, .vsl:focus-visible { outline: 3px solid #fff; outline-offset: -3px; }
 
-/* 7b depoimentos: prints reais, recortados no balao */
-.depos { display: flex; flex-direction: column; gap: 14px; max-width: 440px; margin: 0 auto; }
-.depos img { width: 100%; border-radius: 18px; box-shadow: 0 8px 22px rgba(0,0,0,.18); }
-.depos-nota { text-align: center; font-size: 13.5px; color: var(--suave); margin: 14px 0 0; }
-.garant-mini { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; font-size: 13.5px; color: var(--suave); font-weight: 800; margin: 10px 0 0; }
+/* 3 a resposta: as tres capacidades */
+.caps { margin: 18px 0 8px; border-top: 1px solid var(--linha); }
+.cap { display: flex; gap: 16px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid var(--linha); }
+.cap .ic { width: 46px; height: 46px; border-radius: 50%; background: var(--azul-claro); color: var(--azul); display: grid; place-items: center; flex: none; }
+.cap h3 { font-size: 21px; margin: 2px 0 2px; }
+.cap p { margin: 0; color: var(--suave); font-size: 16.5px; }
+.nota { font-size: 15.5px; color: var(--suave); }
 
-/* 1b faixa */
-.faixa { background: #fff; border-radius: 22px; box-shadow: 0 6px 24px rgba(31,45,92,.08); padding: 6px 16px; margin: 28px 0; }
-.fb { display: flex; gap: 14px; align-items: center; padding: 14px 0; border-bottom: 1.5px dashed #ecdcd6; }
-.fb:last-child { border: 0; }
-.fb .ic { width: 52px; height: 52px; border-radius: 50%; background: var(--rosado); display: flex; align-items: center; justify-content: center; flex: none; }
-.fb .ic img { width: 34px; height: 34px; }
-.fb b { font: 700 18px Fredoka; display: block; color: var(--escuro); } .fb span { color: var(--suave); font-size: 15.5px; }
-.grade4 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 14px 0; }
-.g4 { background: var(--fundo); border-radius: 16px; padding: 12px; text-align: center; }
-.g4 img { width: 38px; height: 38px; margin: 0 auto 4px; } .g4 b { font: 700 16px Fredoka; display: block; color: var(--escuro); } .g4 span { font-size: 13.5px; color: var(--suave); }
+/* 4 nao e coisa de crianca */
+.contra { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 8px 0 20px; }
+.contra figure { margin: 0; }
+.contra .im { border-radius: 10px; overflow: hidden; aspect-ratio: 3/4; background: #fff; border: 1px solid var(--linha); }
+.contra .im img { width: 100%; height: 100%; object-fit: cover; }
+.contra .nao .im img { filter: grayscale(1) contrast(.95); opacity: .85; }
+.contra .sim .im img { object-position: top; }
+.contra figcaption { display: flex; gap: 8px; align-items: flex-start; font-size: 14.5px; line-height: 1.4; margin-top: 10px; color: var(--suave); }
+.contra figcaption b { color: var(--tinta); display: block; }
+.contra .marca-c { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; flex: none; color: #fff; margin-top: 1px; }
+.contra .nao .marca-c { background: var(--vermelho); } .contra .sim .marca-c { background: var(--verde); }
+.contra .marca-c .ico { width: 14px; height: 14px; stroke-width: 3; }
 
-/* 2 dor */
-.escuro { background: var(--escuro); color: #fff; padding: 44px 0; }
-.escuro h2 { font-size: 30px; margin: 12px 0 14px; } .escuro p { color: #dfe4f3; font-size: 17.5px; }
-.escuro .chapeu { background: rgba(255,255,255,.1); color: #ffd3dc; }
-.lista-esc { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
-.le { display: flex; gap: 14px; align-items: center; background: var(--escuro2); border: 1px solid rgba(255,255,255,.08); border-radius: 16px; padding: 14px; font: 700 17.5px Fredoka; }
-.le img { width: 36px; height: 36px; background: rgba(46,148,96,.25); border-radius: 12px; padding: 4px; }
+/* 5 como se usa */
+.modos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0 0 18px; }
+.modo { background: var(--papel); border: 1px solid var(--linha); border-radius: 12px; padding: 16px; }
+.modo .ico { color: var(--azul); width: 26px; height: 26px; margin-bottom: 8px; }
+.modo h3 { font-size: 19px; margin-bottom: 4px; }
+.modo p { margin: 0; font-size: 15px; color: var(--suave); line-height: 1.45; }
+.telas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 6px 0 14px; }
+.telas img { border-radius: 12px; border: 5px solid var(--tinta); }
 
-/* 3 metodo */
-.rosado { background: var(--rosado); padding: 44px 0; }
-.rosado h2 { font-size: 30px; margin: 12px 0 12px; color: var(--escuro); }
-.rotulo { font: 800 13px Nunito; letter-spacing: .08em; color: var(--suave); text-align: center; margin: 22px 0 10px; }
-.capas { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.capa { position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,.15); background: #fff; }
-.capa .n { position: absolute; top: 8px; right: 8px; background: #fff; color: var(--escuro); font: 800 13px Nunito; border-radius: 20px; padding: 3px 10px; box-shadow: 0 2px 6px rgba(0,0,0,.2); }
-.card-ok { display: flex; gap: 12px; align-items: flex-start; background: #fff; border-radius: 18px; padding: 16px; margin-top: 18px; box-shadow: 0 4px 14px rgba(31,45,92,.07); }
-.card-ok .v { width: 30px; height: 30px; border-radius: 50%; background: var(--verde); color: #fff; font-weight: 900; display: flex; align-items: center; justify-content: center; flex: none; }
+/* 6 e 7 publicos */
+.cartao-proprio { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: center; background: var(--papel); border: 1px solid var(--linha); border-radius: 14px; padding: 12px; margin-top: 22px; }
+.cartao-proprio img { border-radius: 10px; }
+.cartao-proprio h3 { font-size: 18.5px; margin-bottom: 4px; }
+.cartao-proprio p { margin: 0; font-size: 15px; color: var(--suave); line-height: 1.45; }
 
-/* 4 app */
-.app-bloco { background: #fff; border-radius: 26px; padding: 22px 18px; box-shadow: 0 8px 28px rgba(31,45,92,.1); margin: -10px 0 0; }
-.app-bloco h3 { font-size: 30px; color: var(--escuro); margin: 12px 0 10px; }
-.telas { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin: 16px 0; }
-.telas img { border: 5px solid #1d2433; border-radius: 18px; }
-.checks { list-style: none; padding: 0; margin: 12px 0; } .checks li { display: flex; gap: 10px; margin-bottom: 10px; font-size: 17px; }
-.checks li::before { content: "✓"; flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--verde); color: #fff; font-weight: 900; display: flex; align-items: center; justify-content: center; font-size: 14px; }
-.pills { display: flex; gap: 8px; flex-wrap: wrap; } .pills span { font: 800 13px Nunito; border-radius: 20px; padding: 5px 12px; background: #fde6ea; color: var(--cta2); } .pills span.v { background: #e2f3e9; color: #1f7a4a !important; }
+/* 8 prova: prints reais, a deslizar */
+.depos { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 20px 14px; margin: 6px -20px 0; -webkit-overflow-scrolling: touch; }
+.depos img { flex: none; width: 82%; max-width: 420px; scroll-snap-align: center; border-radius: 16px; box-shadow: 0 12px 26px -14px rgba(0,0,0,.5); }
+.depos-nota { font-size: 14px; color: var(--suave); margin-top: 6px; }
 
-/* 5 bonus */
-.secao { padding: 44px 0; } .secao h2 { font-size: 30px; color: var(--escuro); text-align: center; margin-bottom: 8px; }
-.secao .intro { text-align: center; color: var(--suave); margin: 0 0 20px; }
-.sub-cinco { text-decoration: underline; text-decoration-color: var(--cta2); text-decoration-thickness: 5px; text-underline-offset: 4px; }
-.bonus-g { display: flex; flex-direction: column; gap: 14px; }
-.bg { background: #fff; border: 3px solid var(--cta2); border-radius: 22px; overflow: hidden; }
-.bg .img { background: var(--escuro); padding: 16px; display: flex; justify-content: center; } .bg .img img { width: 58%; border-radius: 6px; transform: rotate(-3deg); box-shadow: 0 10px 24px rgba(0,0,0,.35); }
-.bg .tx { padding: 14px 16px; } .bg .num { font: 800 13px Nunito; color: var(--cta2); } .bg h3 { font-size: 21px; color: var(--escuro); margin: 2px 0 4px; }
-.bg .selo { display: inline-block; background: var(--dourado); color: #1d2433; font: 800 13px Nunito; border-radius: 20px; padding: 3px 10px; margin-bottom: 4px; }
-.bp { display: flex; gap: 14px; align-items: center; background: #fff; border-radius: 18px; padding: 12px; box-shadow: 0 4px 14px rgba(31,45,92,.07); }
-.bp img { width: 74px; border-radius: 6px; box-shadow: 0 3px 8px rgba(0,0,0,.15); } .bp h3 { font-size: 18px; color: var(--escuro); } .bp p { margin: 2px 0 0; font-size: 15px; color: var(--suave); }
+/* 9 o que recebes */
+.recebe { background: var(--papel); border: 1px solid var(--linha); border-radius: 14px; padding: 8px 18px; }
+.recebe .checks li { border-bottom: 1px solid var(--linha); padding: 12px 0; }
+.recebe .checks li:last-child { border-bottom: 0; }
+.bonus-l { margin: 6px 0 0; padding-left: 20px; color: var(--suave); font-size: 15.5px; }
+.bonus-g { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 16px 0 4px; }
+.bonus-g img { border-radius: 6px; border: 1px solid var(--linha); background: #fff; }
 
-/* 6 amostra */
-.carrossel { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 18px 16px; margin: 0 -18px; scrollbar-width: none; }
-.carrossel::-webkit-scrollbar { display: none; }
-.carrossel figure { margin: 0; flex: 0 0 72%; scroll-snap-align: center; }
-.carrossel img { border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,.14); }
-.carrossel .tl img { border: 6px solid #1d2433; border-radius: 22px; }
-.carrossel figcaption { text-align: center; font-size: 14px; color: var(--suave); font-weight: 700; margin-top: 8px; }
-.dica-arr { text-align: center; font-size: 14px; color: var(--suave); font-weight: 800; }
+/* 10 pacotes (12/10/2026, decisao do Vini): Essencial, Dia a Dia e Completo. Todo botao "Comprar" abre a escolha;
+   o toque no pacote ja abre o checkout dele. O Completo e o Dia a Dia tem checkout sem bump: o MB WAY tambem leva */
+.preco { padding: 52px 0; background: var(--papel); border-top: 1px solid var(--linha); }
+.preco h2, .preco .intro { text-align: center; }
+.preco .intro { color: var(--suave); }
+.comp-img { border-radius: 12px; margin: 0 0 18px; border: 1px solid var(--linha); }
+.pacotes { display: grid; gap: 18px; }
+.pac { background: #fff; border: 1px solid var(--linha); border-radius: 16px; padding: 20px 18px 18px; text-align: left; position: relative; }
+.pac.top { border: 2px solid var(--azul); box-shadow: 0 16px 34px -20px rgba(30,58,95,.6); }
+.pac .tag { position: absolute; top: -12px; left: 16px; background: var(--azul); color: #fff; font: 600 12px "Inter"; letter-spacing: .08em; text-transform: uppercase; border-radius: 6px; padding: 4px 10px; }
+.pac .cab { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.pac h3 { font-size: 25px; margin: 0; }
+.pac .pv { font: 600 30px "Lora", serif; color: var(--azul); white-space: nowrap; line-height: 1; text-align: right; }
+.pac .pv small { display: block; font: 500 12px "Inter"; color: var(--suave); margin-top: 4px; }
+.pac .ds { margin: 6px 0 10px; color: var(--suave); font-size: 15.5px; line-height: 1.4; }
+.pac ul { list-style: none; padding: 0; margin: 0 0 14px; }
+.pac li { display: flex; gap: 9px; align-items: flex-start; font-size: 15.5px; line-height: 1.4; padding: 4px 0; }
+.pac li::before { content: ""; flex: none; width: 15px; height: 15px; margin-top: 4px; background: var(--verde); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/contain no-repeat; }
+.pac li.nao { color: #a3a9b2; } .pac li.nao::before { background: #c9ced5; -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M18 6 6 18M6 6l12 12'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M18 6 6 18M6 6l12 12'/%3E%3C/svg%3E"); }
+.pac li b { color: var(--azul); font-weight: 600; } .pac li.nao b { color: #a3a9b2; }
+.pac .sep { font-size: 14px; color: var(--suave); margin: -4px 0 12px; }
+.pac .bt { display: block; text-align: center; text-decoration: none; font: 600 17px "Inter"; padding: 15px; border-radius: 10px; color: var(--azul); background: #fff; border: 1.5px solid var(--azul); }
+.pac.top .bt { background: var(--cta); border-color: var(--cta); color: #fff; font-size: 18px; box-shadow: 0 10px 24px -10px rgba(150,57,33,.7); }
+.pac-rod { text-align: center; color: var(--suave); font-size: 14px; margin: 18px 0 0; }
 
-/* 7 para quem */
-.quem { display: flex; flex-direction: column; gap: 12px; }
-.qm { display: flex; gap: 14px; align-items: center; background: #fff; border-radius: 18px; padding: 14px; box-shadow: 0 4px 14px rgba(31,45,92,.07); }
-.qm img { width: 60px; height: 60px; } .qm b { font: 700 18px Fredoka; color: var(--escuro); display: block; } .qm span { font-size: 15.5px; color: var(--suave); }
+/* 11 garantia */
+.garantia { background: var(--azul); color: #fff; text-align: center; padding: 48px 0; }
+.garantia .selo-g { width: 116px; height: 116px; border-radius: 50%; margin: 0 auto 18px; border: 2px solid rgba(255,255,255,.55); display: flex; flex-direction: column; align-items: center; justify-content: center; font: 600 11.5px "Inter"; letter-spacing: .1em; text-transform: uppercase; color: #dfe6f0; }
+.garantia .selo-g b { font: 600 40px/1 "Lora", serif; color: #fff; letter-spacing: 0; margin: 2px 0; }
+.garantia h2 { color: #fff; font-size: 27px; }
+.garantia p { color: #d6deea; margin: 0; }
 
-/* 8 garantia */
-.garantia { background: var(--escuro); color: #fff; text-align: center; padding: 40px 0; }
-.garantia .selo-g { width: 130px; height: 130px; border-radius: 50%; margin: 0 auto 14px; background: radial-gradient(circle at 30% 30%, #ffe27a, #d9a21b); display: flex; flex-direction: column; align-items: center; justify-content: center; color: #3b2a07; font: 800 13px Nunito; box-shadow: 0 0 0 6px rgba(242,182,49,.3); }
-.garantia .selo-g b { font: 700 38px Fredoka; line-height: 1; }
-.garantia h2 { font-size: 27px; margin-bottom: 10px; } .garantia p { color: #dfe4f3; }
+/* 12 faq */
+.faq { padding: 52px 0; }
+.faq h2 { text-align: center; }
+.faq details { border-bottom: 1px solid var(--linha); }
+.faq summary { font: 600 17px/1.4 "Inter"; color: var(--azul); padding: 16px 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font: 400 24px/1 "Inter"; color: var(--suave); }
+.faq details[open] summary::after { content: "\2212"; }
+.faq details p { margin: 0 0 16px; color: var(--suave); }
 
-/* 9 preco */
-.preco { padding: 40px 0; }
-.faixa-rosa { background: linear-gradient(90deg, var(--cta), var(--cta2)); color: #fff; text-align: center; border-radius: 18px 18px 0 0; padding: 10px; font: 700 18px Fredoka; letter-spacing: .03em; }
-.faixa-rosa small { display: block; font: 800 13px Nunito; opacity: .9; }
-.card-preco { background: #fff; border-radius: 0 0 24px 24px; box-shadow: 0 10px 30px rgba(31,45,92,.12); padding: 22px 18px; text-align: center; }
-.card-preco .ancora { color: var(--suave); font-size: 16px; margin: 0 0 10px; }
-.card-preco .valor { font: 700 62px Fredoka; color: var(--escuro); line-height: 1; margin: 6px 0 2px; }
-.card-preco .unico { font-weight: 800; color: #1f7a4a; margin-bottom: 14px; }
-.card-preco .checks { text-align: left; }
-.selos { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 14px; font-size: 13px; font-weight: 800; color: var(--suave); }
-.selos span { background: var(--fundo); border-radius: 20px; padding: 6px 12px; }
-.metodos { text-align: center; font-size: 13.5px; color: var(--suave); margin-top: 10px; }
-
-/* 10 faq */
-.faq { background: var(--escuro); padding: 44px 0; color: #fff; }
-.faq h2 { font-size: 30px; text-align: center; margin-bottom: 18px; }
-.faq details { background: var(--escuro2); border-radius: 16px; margin-bottom: 10px; padding: 0 16px; border: 1px solid rgba(255,255,255,.08); }
-.faq summary { font: 700 17.5px Fredoka; padding: 16px 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 10px; }
-.faq summary::after { content: "+"; font-size: 24px; color: var(--dourado); line-height: 1; } .faq details[open] summary::after { content: "−"; }
-.faq details p { margin: 0 0 16px; color: #dfe4f3; }
-
-/* 11 rodape */
-footer { background: #151f42; color: #aeb7d3; font-size: 13.5px; text-align: center; padding: 26px 18px 110px; }
-footer a { color: #d7dcf0; margin: 0 8px; }
-
-
+/* 13 rodape */
+footer { background: #16263d; color: #aab4c4; text-align: center; padding: 30px 20px 110px; font-size: 13.5px; }
+footer p { margin: 0 0 10px; } footer a { color: #d8deea; margin: 0 8px; }
 
 /* barra fixa */
-.barra { position: fixed; left: 0; right: 0; bottom: 0; background: #fff; box-shadow: 0 -6px 20px rgba(0,0,0,.12); padding: 10px 14px; display: flex; align-items: center; gap: 12px; transform: translateY(110%); transition: transform .3s; z-index: 9; }
+.barra { position: fixed; left: 0; right: 0; bottom: 0; background: var(--papel); border-top: 1px solid var(--linha); box-shadow: 0 -8px 24px -12px rgba(0,0,0,.25); padding: 10px 14px; display: flex; align-items: center; gap: 14px; transform: translateY(110%); transition: transform .3s; z-index: 9; }
 .barra.on { transform: none; }
-.barra .pr { font: 700 26px Fredoka; color: var(--escuro); line-height: 1; } .barra .pr small { display: block; font: 800 13px Nunito; color: #1f7a4a; }
-.barra .cta { flex: 1; font-size: 18px; padding: 14px; margin: 0; }
-a:focus-visible, button:focus-visible, summary:focus-visible, .carrossel:focus-visible { outline: 3px solid #1f2d5c; outline-offset: 3px; }
-.garantia a:focus-visible, .faq summary:focus-visible { outline-color: #f2b631; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .barra { transition: none; } }
-@media (min-width: 700px) { .hero h1 { font-size: 44px; } }
-/* telemovel: a VSL tem de caber inteira na primeira dobra */
-@media (max-width: 400px) { .hero h1 { font-size: 29px; margin: 10px 0 8px; } .hero .sub { font-size: 16px; margin: 0 0 12px; } .logo { margin-bottom: 8px; } .mockup { margin: 4px 0 16px; } }
+.barra .pr { font: 600 24px/1 "Lora", serif; color: var(--azul); } .barra .pr small { display: block; font: 500 12px "Inter"; color: var(--suave); margin-bottom: 2px; }
+.barra .cta { flex: 1; font-size: 17px; padding: 14px; margin: 0; }
 
-/* pacotes (12/10/2026, decisao do Vini): Essencial, Dia a Dia e Completo. Todo botao de comprar abre a escolha;
-   o toque no pacote ja abre o checkout dele. O Completo e o Dia a Dia tem checkout sem bump: o MB WAY tambem leva */
-.pacotes { display: grid; gap: 18px; }
-.pac { background: #fff; border: 2px solid #e3e7ee; border-radius: 22px; padding: 20px 16px 16px; text-align: left; position: relative; box-shadow: 0 6px 18px rgba(31,45,92,.08); }
-.pac.top { border: 3px solid var(--cta2); box-shadow: 0 12px 30px rgba(217,68,104,.18); }
-.pac .tag { position: absolute; top: -13px; left: 16px; background: linear-gradient(90deg, var(--cta), var(--cta2)); color: #fff; font: 800 12.5px Nunito; letter-spacing: .05em; border-radius: 20px; padding: 4px 12px; }
-.pac .cab { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
-.pac h3 { font: 700 25px Fredoka; color: var(--escuro); margin: 0; line-height: 1.1; }
-.pac .pv { font: 700 34px Fredoka; color: var(--escuro); white-space: nowrap; line-height: 1; text-align: right; }
-.pac .pv small { display: block; font: 800 12px Nunito; color: var(--suave); margin-top: 3px; }
-.pac .ds { margin: 6px 0 10px; color: var(--suave); font-size: 15.5px; line-height: 1.35; }
-.pac ul { list-style: none; padding: 0; margin: 0 0 14px; }
-.pac li { display: flex; gap: 8px; align-items: flex-start; font-size: 15.5px; line-height: 1.35; padding: 4px 0; }
-.pac li::before { content: "✓"; color: var(--verde); font-weight: 900; flex: none; }
-.pac li.nao { color: #a3acb7; } .pac li.nao::before { content: "✕"; color: #c6cdd5; }
-.pac li b { color: var(--escuro); } .pac li.nao b { color: #a3acb7; }
-.pac .sep { font-size: 14px; color: var(--suave); margin: -4px 0 12px; }
-.pac .bt { display: block; text-align: center; text-decoration: none; font: 800 18px Fredoka; padding: 15px; border-radius: 16px; color: #fff; background: var(--escuro); box-shadow: 0 4px 0 #141d3d; }
-.pac.top .bt { background: linear-gradient(180deg, #2f9a60, #237a4b); box-shadow: 0 8px 22px rgba(46,148,96,.3), 0 4px 0 #1f7349; font-size: 20px; text-transform: uppercase; }
-.pac-rod { text-align: center; color: var(--suave); font-size: 14px; margin: 16px 0 0; }
-.comp-l { display: grid; gap: 10px; margin: 16px 0 6px; }
-.comp-l div { display: flex; gap: 12px; align-items: flex-start; background: #fff; border-radius: 18px; padding: 12px 14px; box-shadow: 0 3px 0 #efe4dc; }
-.comp-l span { font-size: 28px; line-height: 1; } .comp-l p { margin: 0; font-size: 16px; line-height: 1.4; } .comp-l b { color: var(--escuro); }
-.comp-img { width: 100%; height: auto; border-radius: 18px; display: block; margin: 14px 0 4px; }
-.pacm { position: fixed; inset: 0; background: rgba(20,26,40,.55); z-index: 30; display: none; align-items: flex-end; justify-content: center; }
+a:focus-visible, button:focus-visible, summary:focus-visible, .depos:focus-visible { outline: 3px solid var(--azul2); outline-offset: 3px; }
+.garantia a:focus-visible { outline-color: #fff; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .barra { transition: none; } }
+@media (min-width: 700px) { .hero h1 { font-size: 40px; } h2 { font-size: 34px; } }
+/* telemovel: a VSL tem de caber inteira na primeira dobra (medido em 360x640, 375x667, 390x844, 412x915) */
+@media (max-width: 400px) { .hero h1 { font-size: 27px; } .hero .sub { font-size: 16px; margin-bottom: 14px; } .hero .rotulo { margin-top: 10px; } }
+@media (max-height: 700px) { .fone { width: min(244px, 54vw); } .hero h1 { font-size: 25px; } .cabeca { padding-top: 10px; } .hero .rotulo { font-size: 12px; } }
+
+/* janela de pacotes: os 3 inteiros no ecra, sem rolar (Vini, 12/10/2026) */
+.pacm { position: fixed; inset: 0; background: rgba(20,28,45,.55); z-index: 30; display: none; align-items: flex-end; justify-content: center; }
 .pacm.on { display: flex; }
-.pacm .folha { background: var(--fundo); width: 100%; max-width: 560px; max-height: 92vh; overflow: auto; border-radius: 24px 24px 0 0; padding: 16px 16px 22px; animation: pacm-sobe .25s ease-out; }
-@media (min-width: 700px) { .pacm { align-items: center; } .pacm .folha { border-radius: 24px; } }
-.pacm .tt { display: flex; align-items: center; justify-content: space-between; margin: 0 0 18px; } .pacm .tt h2 { font: 700 24px Fredoka; margin: 0; color: var(--escuro); }
-.pacm .x { border: 0; background: #ece6dd; width: 40px; height: 40px; border-radius: 50%; font-size: 18px; cursor: pointer; flex: none; }
-/* a janela mostra os 3 pacotes INTEIROS no ecra, sem rolar, no telemovel e no computador (Vini, 12/10/2026: o Essencial
-   ficava abaixo da dobra e quem queria o de 14,90 podia desistir sem o ver). O Completo continua o cartao grande, em cima;
-   Dia a Dia e Essencial: nome, preco e botao numa linha, e o que leva por baixo, a largura toda (cada item numa linha so).
-   Medido: cabe em 360x560 */
-.pacm .folha { max-height: 92vh; max-height: 96dvh; padding: 12px 14px 14px; }
-.pacm .tt { margin: 0 0 14px; } .pacm .tt h2 { font-size: 21px; } .pacm .x { width: 36px; height: 36px; font-size: 16px; }
+.pacm .folha { background: var(--creme); width: 100%; max-width: 560px; max-height: 92vh; max-height: 96dvh; overflow: auto; border-radius: 20px 20px 0 0; padding: 12px 14px 14px; animation: pacm-sobe .25s ease-out; }
+.pacm .tt { display: flex; align-items: center; justify-content: space-between; margin: 0 0 14px; } .pacm .tt h2 { font-size: 22px; margin: 0; }
+.pacm .x { border: 0; background: #e9e2d6; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; flex: none; display: grid; place-items: center; color: var(--tinta); }
+.pacm .x .ico { width: 18px; height: 18px; }
 .pacm .pacotes { gap: 10px; }
-.pacm .pac { padding: 12px 14px; border-radius: 18px; }
+.pacm .pac { padding: 12px 14px; border-radius: 14px; }
 .pacm .pac.top { padding-top: 16px; }
-.pacm .pac .tag { top: -11px; font-size: 11.5px; padding: 3px 10px; }
-.pacm .pac h3 { font-size: 22px; } .pacm .pac .pv { font-size: 28px; }
+.pacm .pac .tag { top: -11px; font-size: 11px; padding: 3px 9px; }
+.pacm .pac h3 { font-size: 21px; } .pacm .pac .pv { font-size: 26px; }
 .pacm .pac ul { margin: 6px 0 10px; } .pacm .pac li { font-size: 14.5px; line-height: 1.3; padding: 2px 0; }
-.pacm .pac.top .bt { padding: 13px; font-size: 18px; }
+.pacm .pac.top .bt { padding: 13px; font-size: 17px; }
 .pacm .pac.lin .cab { align-items: center; }
-.pacm .pac.lin h3 { font-size: 20px; }
+.pacm .pac.lin h3 { font-size: 19px; }
 .pacm .pac.lin .acao { display: flex; align-items: center; gap: 10px; flex: none; }
-.pacm .pac.lin .pv { font-size: 22px; }
-.pacm .pac.lin .bt { padding: 10px 16px; font-size: 16px; }
+.pacm .pac.lin .pv { font-size: 21px; }
+.pacm .pac.lin .bt { padding: 10px 16px; font-size: 15px; }
 .pacm .pac.lin ul { margin: 6px 0 0; } .pacm .pac.lin li { font-size: 14px; }
 .pacm .pac-rod { font-size: 12.5px; margin: 10px 0 0; }
-/* telemovel baixo (iPhone SE com as barras do Safari, Android de 640): aperta os espacos para o rodape caber tambem */
 @media (max-height: 620px) {
   .pacm .folha { padding-top: 10px; padding-bottom: 10px; } .pacm .tt { margin-bottom: 9px; } .pacm .tt h2 { font-size: 19px; }
   .pacm .pacotes { gap: 7px; } .pacm .pac { padding: 10px 12px; } .pacm .pac.top { padding-top: 14px; }
   .pacm .pac ul { margin: 4px 0 8px; } .pacm .pac li { font-size: 14px; padding: 0; } .pacm .pac.top .bt { padding: 11px; }
-  .pacm .pac.lin .pv { font-size: 20px; } .pacm .pac.lin .bt { padding: 9px 14px; } .pacm .pac.lin ul { margin-top: 4px; } .pacm .pac-rod { margin-top: 8px; }
+  .pacm .pac.lin .pv { font-size: 19px; } .pacm .pac.lin .bt { padding: 9px 14px; } .pacm .pac.lin ul { margin-top: 4px; } .pacm .pac-rod { margin-top: 8px; }
 }
 @keyframes pacm-sobe { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
 body.pacm-on { overflow: hidden; }
@@ -252,222 +253,208 @@ body.pacm-on { overflow: hidden; }
 </head>
 <body>
 
+<!-- icones de traco (estilo Lucide, MIT), usados por <use> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-memoria" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-atencao" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7.5"/><path d="m21 21-4.6-4.6"/></symbol>
+  <symbol id="i-raciocinio" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></symbol>
+  <symbol id="i-papel" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></symbol>
+  <symbol id="i-telemovel" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2.5"/><path d="M11 18h2"/></symbol>
+</svg>
+
 <main>
-<!-- 1. HERO -->
-<header class="w topo hero">
-  <div class="logo"><img width="256" height="256" src="img/icone.png" alt="">Recorda Comigo</div><br>
-  <span class="pilula">360 ATIVIDADES • 8 CADERNOS + 5 BÓNUS</span>
-  <h1>Os nossos mais velhos <span class="rosa">merecem mais</span> do que passar os dias em frente à&nbsp;televisão</h1>
-  <p class="sub">Atividades simples de <b class="rosa">15 minutos por dia</b> que puxam pela memória e pela atenção, e trazem de volta o sorriso de quem acerta. No telemóvel ou em papel, em família ou no lar.</p>
-  <div class="mockup">
-    <div class="vsl" data-vsl>
-      <video src="img/vsl.mp4?v=2" poster="img/vsl-poster.jpg" width="406" height="728" autoplay muted loop playsinline preload="metadata" aria-label="Vídeo: o Recorda Comigo por dentro, em pouco mais de um minuto"></video>
-      <div class="barra-v"><i></i></div>
-      <button class="som" type="button" aria-label="Ver o vídeo com som, desde o início"><b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M19 6a8 8 0 0 1 0 12"/></svg><span>Ouvir</span></b></button>
-    </div>
+<!-- 1. HERO: fala com quem cuida e nomeia o beneficio (decisao do Vini, 13/10/2026) -->
+<header class="w cabeca"><div class="marca">Recorda Comigo</div></header>
+<section class="w hero">
+  <span class="rotulo">Para quem cuida de alguém com mais idade</span>
+  <h1>360 atividades para exercitar a <em>memória</em>, a atenção e o raciocínio</h1>
+  <p class="sub">Prontas a usar em casa ou no lar, 15 minutos por dia.</p>
+  <div class="fone"><div class="tela"><span class="ilha" aria-hidden="true"></span>
+  <div class="vsl" data-vsl>
+    <video src="img/vsl3.mp4?v=3" poster="img/vsl3-capa.jpg" width="406" height="728" autoplay muted loop playsinline preload="metadata" aria-label="Vídeo: a memória também se exercita, e como são as atividades do Recorda Comigo"></video>
+    <div class="barra-v"><i></i></div>
+    <div class="pausa" aria-hidden="true"><b><svg viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg></b></div>
+    <button class="mudo" type="button" aria-label="Silenciar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"/><g class="ondas"><path d="M16 9a4 4 0 0 1 0 6"/><path d="M19 6a8 8 0 0 1 0 12"/></g><g class="x"><path d="m16 9 6 6"/><path d="m22 9-6 6"/></g></svg></button>
+    <button class="som" type="button" aria-label="Ver o vídeo com som, desde o início"><b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M19 6a8 8 0 0 1 0 12"/></svg><span>Ouvir</span></b></button>
   </div>
+  </div></div>
   <a class="cta" href="https://pay.hotmart.com/D107781573E?checkoutMode=10">Quero as 360 atividades</a>
-  <p class="garant-mini"><span>✓ Acesso imediato</span><span>✓ Pagamento único</span><span>✓ 15 dias para experimentar</span></p>
-</header>
+  <ul class="garante">
+    <li><svg class="ico"><use href="#i-check"/></svg>Acesso imediato</li>
+    <li><svg class="ico"><use href="#i-check"/></svg>Pagamento único</li>
+    <li><svg class="ico"><use href="#i-check"/></svg>15 dias para experimentar</li>
+  </ul>
+</section>
 
-<!-- 1b. FAIXA DE BENEFICIOS -->
-<section class="w">
-  <div class="faixa">
-    <div class="fb"><div class="ic"><img width="256" height="256" loading="lazy" decoding="async" src="img/infinito.png" alt=""></div><div><b>Pagamento único</b><span>Pagas uma vez, sem mensalidades.</span></div></div>
-    <div class="fb"><div class="ic"><img width="256" height="256" loading="lazy" decoding="async" src="img/coracao.png" alt=""></div><div><b>Feito para a família e para quem cuida</b><span>Simples, seguro e fácil de usar.</span></div></div>
-    <div class="grade4">
-      <div class="g4"><img width="256" height="256" loading="lazy" decoding="async" src="img/email.png" alt=""><b>Acesso imediato</b><span>Logo a seguir ao pagamento</span></div>
-      <div class="g4"><img width="256" height="256" loading="lazy" decoding="async" src="img/telemovel.png" alt=""><b>No telemóvel</b><span>Toca e a atividade corrige sozinha</span></div>
-      <div class="g4"><img width="256" height="256" loading="lazy" decoding="async" src="img/impressora.png" alt=""><b>Imprime</b><span>As vezes que quiseres, em A4</span></div>
-      <div class="g4"><img width="256" height="256" loading="lazy" decoding="async" src="img/relogio.png" alt=""><b>Ao teu ritmo</b><span>Quando e onde quiseres</span></div>
-    </div>
+<!-- 2. A DOR: a memoria, a mesma da VSL -->
+<section class="sec papel">
+  <div class="w">
+    <span class="rotulo">Quem cuida conhece isto</span>
+    <h2>Entrar na cozinha e já não saber o que se ia buscar</h2>
+    <div class="foto"><img width="900" height="1125" loading="lazy" decoding="async" src="img/foto-esquece.jpg" alt="Senhor sentado à mesa, com as mãos na cabeça"></div>
+    <p>O nome que fica na ponta da língua. A conta do troco que antes se fazia de cabeça e agora custa. E os dias a passarem todos iguais, sem nada que puxe pela cabeça.</p>
+    <p>Quem cuida quer ajudar, mas nem sempre tem o que propor. Inventar uma atividade nova todos os dias cansa, e as fichas que se encontram parecem feitas para a escola primária.</p>
   </div>
 </section>
 
-<!-- 2. DOR + BENEFICIOS -->
-<section class="escuro">
+<!-- 3. A RESPOSTA: o beneficio e o mecanismo -->
+<section class="sec">
   <div class="w">
-    <span class="chapeu">ESTIMULAÇÃO COGNITIVA</span>
-    <h2>Porque é que exercitar a mente <span class="dour">faz tanta diferença?</span></h2>
-    <p>O dia passa em frente à televisão. Os nomes demoram a vir, as palavras fogem, e a vontade de fazer coisas é cada vez menor. Quem cuida quer ajudar, mas nem sempre sabe o que propor.</p>
-    <p><b>Com atividades simples, alguns minutos por dia, podes ajudar a:</b></p>
-    <div class="lista-esc">
-      <div class="le"><img width="256" height="256" loading="lazy" decoding="async" src="img/cerebro.png" alt="">Exercitar a memória</div>
-      <div class="le"><img width="256" height="256" loading="lazy" decoding="async" src="img/lupa.png" alt="">Treinar a atenção e a concentração</div>
-      <div class="le"><img width="256" height="256" loading="lazy" decoding="async" src="img/estrela.png" alt="">Ocupar o tempo com algo que dá gosto</div>
-      <div class="le"><img width="256" height="256" loading="lazy" decoding="async" src="img/trofeu.png" alt="">Reforçar a autoestima e a confiança</div>
-      <div class="le"><img width="256" height="256" loading="lazy" decoding="async" src="img/cafe.png" alt="">Ter um momento de conversa e companhia</div>
+    <span class="rotulo">A resposta</span>
+    <h2>A memória também se <em>exercita</em></h2>
+    <p>Como a caminhada para as pernas, o que conta é fazer um bocadinho todos os dias. O Recorda Comigo traz a atividade pronta: 15 minutos, do nível fácil ao desafio, com jogos que dão gosto acabar.</p>
+    <div class="caps">
+      <div class="cap"><span class="ic"><svg class="ico"><use href="#i-memoria"/></svg></span><div><h3>Memória</h3><p>Recordar listas de palavras, imagens e pares iguais.</p></div></div>
+      <div class="cap"><span class="ic"><svg class="ico"><use href="#i-atencao"/></svg></span><div><h3>Atenção</h3><p>Encontrar as palavras escondidas, o diferente, o que falta.</p></div></div>
+      <div class="cap"><span class="ic"><svg class="ico"><use href="#i-raciocinio"/></svg></span><div><h3>Raciocínio</h3><p>Contas da mercearia em euros, sequências e sudoku.</p></div></div>
     </div>
+    <p class="nota">E ainda linguagem, perceção visual, orientação no tempo e no espaço, contas do dia a dia e coordenação: 8 cadernos com 45 atividades cada, e as respostas no fim.</p>
   </div>
 </section>
 
-<!-- 3. METODO / CADERNOS -->
-<section class="rosado">
+<!-- 4. NAO E COISA DE CRIANCA: o angulo que mais vende nos anuncios de papel (5 vendas, 13/10/2026) -->
+<section class="sec papel">
   <div class="w">
-    <span class="chapeu">KIT COMPLETO COM 8 CADERNOS</span>
-    <h2>O método Recorda Comigo: 8 cadernos de estimulação cognitiva, do nível fácil ao desafiante</h2>
-    <p>Cada caderno trabalha uma capacidade, com atividades que sobem de nível devagar: do Nível 1, para começar, ao Nível 3, de desafio.</p>
-    <p class="rotulo">OS 8 CADERNOS DO MÉTODO</p>
-    <div class="capas">
-      <div class="capa"><img width="794" height="1123" loading="lazy" decoding="async" src="img/capa-memoria.jpg" alt="Caderno Memória"><span class="n">45 atividades</span></div>
-      <div class="capa"><img width="794" height="1123" loading="lazy" decoding="async" src="img/capa-atencao.jpg" alt="Caderno Atenção e Concentração"><span class="n">45 atividades</span></div>
-      <div class="capa"><img width="794" height="1123" loading="lazy" decoding="async" src="img/capa-linguagem.jpg" alt="Caderno Linguagem e Palavras"><span class="n">45 atividades</span></div>
-      <div class="capa"><img width="794" height="1123" loading="lazy" decoding="async" src="img/capa-raciocinio.jpg" alt="Caderno Raciocínio e Lógica"><span class="n">45 atividades</span></div>
-      <div class="capa"><img width="794" height="1123" loading="lazy" decoding="async" src="img/capa-percecao.jpg" alt="Caderno Perceção Visual"><span class="n">45 atividades</span></div>
-      <div class="capa"><img width="794" height="1123" loading="lazy" decoding="async" src="img/capa-orientacao.jpg" alt="Caderno Orientação no Tempo e no Espaço"><span class="n">45 atividades</span></div>
-      <div class="capa"><img width="794" height="1123" loading="lazy" decoding="async" src="img/capa-contas.jpg" alt="Caderno Contas do Dia a Dia"><span class="n">45 atividades</span></div>
-      <div class="capa"><img width="794" height="1123" loading="lazy" decoding="async" src="img/capa-coordenacao.jpg" alt="Caderno Coordenação e Traço"><span class="n">45 atividades</span></div>
+    <h2>Não é coisa de criança</h2>
+    <div class="contra">
+      <figure class="nao">
+        <div class="im"><img width="600" height="800" loading="lazy" decoding="async" src="img/foto-ficha-crianca.jpg" alt="Ficha infantil com letras para colorir"></div>
+        <figcaption><span class="marca-c"><svg class="ico"><use href="#i-x"/></svg></span><span><b>Fichas de escola</b>vogais e desenhos para colorir</span></figcaption>
+      </figure>
+      <figure class="sim">
+        <div class="im"><img width="600" height="800" loading="lazy" decoding="async" src="img/folha-compras-adulto.jpg" alt="Atividade Ida às compras, com o talão da mercearia em euros"></div>
+        <figcaption><span class="marca-c"><svg class="ico"><use href="#i-check"/></svg></span><span><b>Recorda Comigo</b>o troco em euros, os provérbios, as horas</span></figcaption>
+      </figure>
     </div>
-    <div class="card-ok"><span class="v">✓</span><div><b>Respostas incluídas em todos os cadernos.</b> No telemóvel, a atividade corrige na hora. No papel, as respostas estão no fim de cada caderno, para terminar sempre com o gosto de ver que acertou.</div></div>
+    <p>Quem criou filhos e fez contas a vida inteira não quer pintar desenhos. Aqui as atividades são de adulto, com coisas de cá: a ida à mercearia, os provérbios de sempre, a broa e o bacalhau na sopa de letras.</p>
+    <p>Letra grande, instruções curtas e as respostas no fim de cada caderno.</p>
+    <div class="cta-bloco"><a class="cta" href="https://pay.hotmart.com/D107781573E?checkoutMode=10">Quero as 360 atividades</a></div>
   </div>
 </section>
 
-<!-- 4. EXCLUSIVO: O APP -->
-<section class="rosado" style="padding-top: 0">
+<!-- 5. COMO SE USA: papel e telemovel -->
+<section class="sec">
   <div class="w">
-    <div class="app-bloco">
-      <span class="chapeu">📱 NO TELEMÓVEL</span>
-      <h3>Faz no telemóvel ou imprime: tu escolhes</h3>
-      <p>As 360 atividades abrem no telemóvel como uma aplicação. Toca na letra, na resposta ou no ponto, e a atividade <b>corrige sozinha e festeja no fim</b>.</p>
-      <div class="telas"><img width="780" height="1688" loading="lazy" decoding="async" src="img/app-sopa.jpg" alt="Sopa de letras no telemóvel"><img width="780" height="1688" loading="lazy" decoding="async" src="img/app-relogio.jpg" alt="Relógio no telemóvel"><img width="780" height="1688" loading="lazy" decoding="async" src="img/app-festa.jpg" alt="Atividade concluída"></div>
-      <ul class="checks">
-        <li>Sem impressora, começa no próprio dia</li>
-        <li>Letra grande e botões fáceis de tocar</li>
-        <li>Cada atividade também em PDF, para imprimir</li>
-      </ul>
-      <div class="pills"><span>No telemóvel e no tablet</span><span class="v">+ PDF para imprimir</span></div>
+    <span class="rotulo">Como se usa</span>
+    <h2>Numa folha à mesa ou no telemóvel</h2>
+    <div class="foto"><img width="900" height="675" loading="lazy" decoding="async" src="img/foto-folhas-mesa.jpg" alt="Folhas impressas do Recorda Comigo em cima de uma mesa"></div>
+    <div class="modos">
+      <div class="modo"><svg class="ico"><use href="#i-papel"/></svg><h3>Em papel</h3><p>Cada atividade em PDF, pronta a imprimir em A4, as vezes que quiseres.</p></div>
+      <div class="modo"><svg class="ico"><use href="#i-telemovel"/></svg><h3>No telemóvel</h3><p>Abre como uma aplicação. Toca-se na resposta e a atividade corrige sozinha.</p></div>
     </div>
-    <div style="margin-top: 22px"><a class="cta verde" href="https://pay.hotmart.com/D107781573E?checkoutMode=10">Começar hoje</a><p class="seguro">🔒 Pagamento seguro · Acesso logo a seguir à compra</p></div>
+    <div class="telas">
+      <img width="780" height="1688" loading="lazy" decoding="async" src="img/app-sopa.jpg" alt="Sopa de letras no telemóvel">
+      <img width="780" height="1688" loading="lazy" decoding="async" src="img/app-relogio.jpg" alt="Que horas são, no telemóvel">
+      <img width="780" height="1688" loading="lazy" decoding="async" src="img/app-festa.jpg" alt="Atividade concluída no telemóvel">
+    </div>
+    <p class="nota">Sem impressora, começa-se no telemóvel no próprio dia.</p>
   </div>
 </section>
 
-<!-- 5. BONUS -->
-<section class="secao">
+<!-- 6. PARA QUEM TRABALHA: o publico que mais compra (animadoras, diretora tecnica, cuidadoras) -->
+<section class="sec papel">
   <div class="w">
-    <h2>Incluídos no kit: <span class="sub-cinco">cinco</span> bónus</h2>
-    <p class="intro">Materiais extra para facilitar o cuidado e tornar o dia a dia mais prático.</p>
-    <div class="bonus-g">
-      <div class="bg"><div class="img"><img width="794" height="1123" loading="lazy" decoding="async" src="img/bonus-sopas-de-portugal.jpg" alt="Ficha do bónus: Sopas de letras de Portugal"></div><div class="tx"><p class="num">BÓNUS 01</p><h3>Sopas de letras de Portugal</h3><p>Cidades, comida portuguesa, festas e tradições: 8 sopas de letras com temas de cá.</p></div></div>
-      <div class="bg"><div class="img"><img width="794" height="1123" loading="lazy" decoding="async" src="img/bonus-proverbios.jpg" alt="Ficha do bónus: Provérbios para completar"></div><div class="tx"><p class="num">BÓNUS 02</p><h3>Provérbios para completar</h3><p>Os provérbios de sempre, para completar e conversar. Com as respostas no fim.</p></div></div>
-      <div class="bp"><img width="794" height="1123" loading="lazy" decoding="async" src="img/bonus-cuidados-diarios.jpg" alt="Ficha do bónus: Lista de cuidados diários"><div><p class="num" style="color:var(--cta2);font-weight:800;margin:0">BÓNUS 03</p><h3>Lista de cuidados diários</h3><p>Medicação, refeições, água e atividade numa só folha por semana.</p></div></div>
-      <div class="bp"><img width="794" height="1123" loading="lazy" decoding="async" src="img/bonus-ficha-pessoal.jpg" alt="Ficha do bónus: Ficha pessoal e contactos"><div><p class="num" style="color:var(--cta2);font-weight:800;margin:0">BÓNUS 04</p><h3>Ficha pessoal e contactos</h3><p>Os dados e contactos de emergência sempre à mão.</p></div></div>
-      <div class="bp"><img width="794" height="1123" loading="lazy" decoding="async" src="img/bonus-ficha-saude.jpg" alt="Ficha do bónus: Ficha de saúde e medicação"><div><p class="num" style="color:var(--cta2);font-weight:800;margin:0">BÓNUS 05</p><h3>Ficha de saúde e medicação</h3><p>Alergias, doenças e medicação organizadas para levar às consultas.</p></div></div>
-    </div>
+    <span class="rotulo">Para lares, centros de dia e apoio domiciliário</span>
+    <h2>As sessões já vêm prontas</h2>
+    <div class="foto"><img width="900" height="1125" loading="lazy" decoding="async" src="img/foto-lar.jpg" alt="Animadora a conversar com uma senhora numa sala de convívio"></div>
+    <p>Escolhes o caderno, imprimes para o grupo, e amanhã já sabes o que pôr na mesa. As 360 atividades estão separadas por capacidade e por nível, para adaptar a cada utente.</p>
+    <ul class="checks">
+      <li><svg class="ico"><use href="#i-check"/></svg><span>8 capacidades, 3 níveis em cada uma</span></li>
+      <li><svg class="ico"><use href="#i-check"/></svg><span>Imprime as vezes que precisares, para o grupo inteiro</span></li>
+      <li><svg class="ico"><use href="#i-check"/></svg><span>Material de adulto: ninguém se sente de volta à escola</span></li>
+      <li><svg class="ico"><use href="#i-check"/></svg><span>Respostas incluídas em todos os cadernos</span></li>
+    </ul>
   </div>
 </section>
 
-<!-- 6. AMOSTRA -->
-<section class="rosado">
+<!-- 7. PARA A FAMILIA, e para quem quer para si -->
+<section class="sec">
   <div class="w">
-    <h2 style="text-align:center">Vê como são as atividades: simples, claras e prontas a usar</h2>
-    <p style="text-align:center">Cada ficha foi pensada para ler sem esforço: letra grande, instruções diretas e ilustrações coloridas.</p>
-    <div class="carrossel" tabindex="0" role="region" aria-label="Exemplos de atividades, desliza para ver mais">
-      <figure><img width="794" height="1124" src="img/folha-linguagem-1.jpg" alt="Exemplo de atividade: Sopa de letras"><figcaption>Sopa de letras</figcaption></figure>
-      <figure class="tl"><img width="780" height="1688" loading="lazy" decoding="async" src="img/app-sopa.jpg" alt="Exemplo de atividade: A mesma sopa, no telemóvel"><figcaption>A mesma sopa, no telemóvel</figcaption></figure>
-      <figure><img width="794" height="1124" src="img/folha-orientacao-1.jpg" alt="Exemplo de atividade: Que horas são?"><figcaption>Que horas são?</figcaption></figure>
-      <figure><img width="794" height="1123" loading="lazy" decoding="async" src="img/folha-contas-2.jpg" alt="Exemplo de atividade: Ida às compras, em euros"><figcaption>Ida às compras, em euros</figcaption></figure>
-      <figure><img width="794" height="1123" loading="lazy" decoding="async" src="img/folha-raciocinio-2.jpg" alt="Exemplo de atividade: Sudoku"><figcaption>Sudoku</figcaption></figure>
-      <figure><img width="794" height="1123" loading="lazy" decoding="async" src="img/folha-memoria-2.jpg" alt="Exemplo de atividade: Recordar as imagens"><figcaption>Recordar as imagens</figcaption></figure>
-      <figure class="tl"><img width="780" height="1688" loading="lazy" decoding="async" src="img/app-relogio.jpg" alt="Exemplo de atividade: Relógios, no telemóvel"><figcaption>Relógios, no telemóvel</figcaption></figure>
-      <figure><img width="794" height="1123" loading="lazy" decoding="async" src="img/folha-atencao-2.jpg" alt="Exemplo de atividade: Encontrar o diferente"><figcaption>Encontrar o diferente</figcaption></figure>
-      <figure><img width="794" height="1124" loading="lazy" decoding="async" src="img/folha-percecao-1.jpg" alt="Exemplo de atividade: Formas iguais"><figcaption>Formas iguais</figcaption></figure>
-      <figure><img width="794" height="1124" loading="lazy" decoding="async" src="img/folha-coordenacao-1.jpg" alt="Exemplo de atividade: Labirinto"><figcaption>Labirinto</figcaption></figure>
-      <figure><img width="794" height="1123" loading="lazy" decoding="async" src="img/folha-coordenacao-2.jpg" alt="Exemplo de atividade: Ligar os pontos"><figcaption>Ligar os pontos</figcaption></figure>
-      <figure><img width="794" height="1123" loading="lazy" decoding="async" src="img/folha-orientacao-2.jpg" alt="Exemplo de atividade: O calendário"><figcaption>O calendário</figcaption></figure>
-      <figure><img width="794" height="1124" loading="lazy" decoding="async" src="img/folha-orientacao-3.jpg" alt="Exemplo de atividade: Batalha naval"><figcaption>Batalha naval</figcaption></figure>
-      <figure><img width="794" height="1123" loading="lazy" decoding="async" src="img/folha-linguagem-2.jpg" alt="Exemplo de atividade: Provérbios"><figcaption>Provérbios</figcaption></figure>
-      <figure class="tl"><img width="780" height="1688" loading="lazy" decoding="async" src="img/app-festa.jpg" alt="Exemplo de atividade: No fim, uma festa"><figcaption>No fim, uma festa</figcaption></figure>
+    <span class="rotulo">Para a família</span>
+    <h2>Uma atividade por dia, perto ou longe</h2>
+    <div class="foto"><img width="900" height="1125" loading="lazy" decoding="async" src="img/foto-familia.jpg" alt="Filha e pai à mesa a fazer as atividades em papel"></div>
+    <p>Para quem cuida da mãe ou do pai: uma folha à mesa com o café, ou o jogo do dia no telemóvel. Começa no nível fácil, para ganhar confiança, e sobe ao ritmo de cada um.</p>
+    <div class="cartao-proprio">
+      <img width="700" height="875" loading="lazy" decoding="async" src="img/foto-proprio.jpg" alt="Senhor a fazer uma atividade em papel na marquise">
+      <div><h3>E para quem quer manter a cabeça ativa</h3><p>Os níveis 2 e 3 são um bom desafio, mesmo para quem tem boa memória.</p></div>
     </div>
-    <p class="dica-arr">‹ desliza para ver mais ›</p>
+    <div class="cta-bloco"><a class="cta" href="https://pay.hotmart.com/D107781573E?checkoutMode=10">Quero as 360 atividades</a></div>
   </div>
 </section>
 
-<!-- 7. PARA QUEM E -->
-<section class="secao">
+<!-- 8. PROVA: prints reais de quem testou com acesso oferecido antes do lancamento (30/09/2026) -->
+<section class="sec papel">
   <div class="w">
-    <h2>Para quem é o Recorda Comigo</h2>
-    <p class="intro">Para fazer em casa, juntos, ou para usar no trabalho.</p>
-    <div class="quem">
-      <div class="qm"><img width="256" height="256" loading="lazy" decoding="async" src="img/familia.png" alt=""><div><b>Filhos e netos que cuidam</b><span>Uma atividade pronta para cada dia, sem ter de procurar nem inventar.</span></div></div>
-      <div class="qm"><img width="256" height="256" loading="lazy" decoding="async" src="img/cuidadora.png" alt=""><div><b>Cuidadores e animadores</b><span>Sessões prontas para o lar, o centro de dia ou o apoio domiciliário.</span></div></div>
-      <div class="qm"><img width="256" height="256" loading="lazy" decoding="async" src="img/avo.png" alt=""><div><b>Quem quer manter a mente ativa</b><span>Os Níveis 2 e 3 são um bom desafio, mesmo sem problemas de memória.</span></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- 7b. DEPOIMENTOS: prints reais de quem testou com acesso oferecido antes do lancamento (30/09/2026) -->
-<section class="rosado">
-  <div class="w">
-    <h2 style="text-align:center">O que nos dizem as famílias</h2>
-    <p style="text-align:center">Antes de abrirmos as vendas, pedimos a algumas famílias que experimentassem. Foi isto que nos mandaram.</p>
-    <div class="depos">
+    <h2>O que nos dizem</h2>
+    <p>Mensagens reais de quem recebeu o acesso para experimentar, antes do lançamento.</p>
+    <div class="depos" tabindex="0" role="region" aria-label="Mensagens de quem experimentou, desliza para ver mais">
       <img width="700" height="431" loading="lazy" decoding="async" src="img/depo-1.jpg" alt="Mensagem: O meu sogro no início resmungou que aquilo era coisa de criança, mas agora já pede para eu lhe pôr a app. Diz que lhe puxa pela cabeça. Estamos contentes, obrigada pela dica!">
       <img width="700" height="478" loading="lazy" decoding="async" src="img/depo-2.jpg" alt="Mensagem: A minha mãe tem usado todos os dias, ela agora conta-me os joguinhos quando falamos ao telefone. Tem andado mais animada, desde que o meu pai faleceu que não a ouvia assim.">
       <img width="700" height="473" loading="lazy" decoding="async" src="img/depo-3.jpg" alt="Mensagem: Tenho usado a app com a D. Lurdes e tem sido ótimo, ela fica entretida um bom bocado e eu consigo tratar das minhas coisas. Hoje até se lembrou do nome da vizinha que já não se lembrava há semanas.">
       <img width="700" height="401" loading="lazy" decoding="async" src="img/depo-4.jpg" alt="Mensagem: O meu pai que não queria nada com tecnologia agora está sempre agarrado ao tablet. A minha mulher já se queixa que ele nem ouve quando o chamam pra jantar.">
       <img width="700" height="371" loading="lazy" decoding="async" src="img/depo-5.jpg" alt="Mensagem: A minha mãe está a adorar a app. Ontem ligou-me às 10 da noite só para dizer que tinha passado o nível dos cartões, nem queria acreditar. Obrigada a sério.">
     </div>
-    <p class="depos-nota">Mensagens reais, enviadas por quem recebeu o acesso para experimentar. Cada pessoa tem o seu ritmo.</p>
+    <p class="depos-nota">Desliza para ver mais. Cada pessoa tem o seu ritmo.</p>
   </div>
 </section>
 
-<!-- 8b. O PACOTE COMPLETO (12/10/2026): a dor primeiro, cada complemento como a saida de uma -->
-<section class="rosado">
+<!-- 9. O QUE RECEBES -->
+<section class="sec">
   <div class="w">
-    <span class="chapeu">PARA IR MAIS LONGE</span>
-    <h2>O kit ocupa 15 minutos. <span class="rosa">E o resto do dia?</span></h2>
-    <p class="intro">O pacote Completo junta ao kit o que faz falta nas outras horas do dia.</p>
-    <img class="comp-img" width="1000" height="760" loading="lazy" decoding="async" src="img/completo.jpg" alt="As folhas do pacote Completo: Plano de 90 Dias, Jogos, Corpo Ativo, Memórias da Época e Festas do Ano">
-    <div class="comp-l">
-      <div><span>📅</span><p><b>«O que lhe dou hoje?» deixa de ser pergunta.</b> O Plano de 90 Dias traz a atividade de cada dia já escolhida, do fácil ao difícil.</p></div>
-      <div><span>🎲</span><p><b>A tarde já não acaba em silêncio.</b> Jogos para Jogar Juntos: bingo com sorteador no telemóvel, dominó, memória e adivinhas.</p></div>
-      <div><span>🪑</span><p><b>Parado o dia todo?</b> O Corpo Ativo tem rotinas de 10 minutos para mexer o corpo, sem sair da cadeira.</p></div>
-      <div><span>🎶</span><p><b>Quando já não há conversa.</b> As Memórias da Época trazem o fado, a Amália e os Santos Populares, e os olhos voltam a brilhar.</p></div>
+    <h2>O que recebes</h2>
+    <div class="recebe">
+      <ul class="checks">
+        <li><svg class="ico"><use href="#i-check"/></svg><span><b>8 cadernos com 360 atividades</b>, no telemóvel e em PDF para imprimir</span></li>
+        <li><svg class="ico"><use href="#i-check"/></svg><span><b>3 níveis em cada caderno</b>, do fácil ao desafio, com as respostas</span></li>
+        <li><svg class="ico"><use href="#i-check"/></svg><span><b>5 bónus</b>
+          <ul class="bonus-l"><li>Sopas de letras de Portugal</li><li>Provérbios para completar</li><li>Lista de cuidados diários</li><li>Ficha pessoal e contactos</li><li>Ficha de saúde e medicação</li></ul></span></li>
+        <li><svg class="ico"><use href="#i-check"/></svg><span><b>Acesso logo a seguir ao pagamento</b>, sem mensalidades</span></li>
+      </ul>
     </div>
-    <h3 style="margin:22px 0 4px">E 5 bónus que só o Completo tem</h3>
-    <img class="comp-img" width="1000" height="760" loading="lazy" decoding="async" src="img/bonus-completo.jpg" alt="Os 5 bónus exclusivos do pacote Completo">
-    <ul class="checks">
-      <li><span><b>Festas do Ano:</b> Natal, Ano Novo, Páscoa, Carnaval, São Martinho e mais, com atividades e conversas para cada festa</span></li>
-      <li><span><b>O Livro da Minha Vida:</b> perguntas guiadas para escrever, juntos, a história dele ou dela</span></li>
-      <li><span><b>12 Sessões de Grupo:</b> 45 minutos passo a passo, para o lar ou para a família reunida</span></li>
-      <li><span><b>Diplomas de participação</b> para imprimir e entregar</span></li>
-      <li><span><b>Músicas da Época:</b> 35 canções dos anos 50, 60 e 70 para ouvir juntos e conversar</span></li>
-    </ul>
-    <div style="margin-top:20px"><a class="cta verde" href="https://pay.hotmart.com/D107781573E?checkoutMode=10">Escolher o meu kit</a></div>
+    <div class="bonus-g" aria-hidden="true">
+      <img width="794" height="1123" loading="lazy" decoding="async" src="img/bonus-sopas-de-portugal.jpg" alt="">
+      <img width="794" height="1123" loading="lazy" decoding="async" src="img/bonus-proverbios.jpg" alt="">
+      <img width="794" height="1123" loading="lazy" decoding="async" src="img/bonus-cuidados-diarios.jpg" alt="">
+      <img width="794" height="1123" loading="lazy" decoding="async" src="img/bonus-ficha-pessoal.jpg" alt="">
+      <img width="794" height="1123" loading="lazy" decoding="async" src="img/bonus-ficha-saude.jpg" alt="">
+    </div>
   </div>
 </section>
 
-<!-- 8. GARANTIA -->
+<!-- 10. PACOTES: tres pacotes (12/10/2026, decisao do Vini). Precos e checkouts na Hotmart; o Essencial e o kit com os bumps -->
+<section class="preco" id="comprar">
+  <div class="w">
+    <h2>Escolhe o teu kit</h2>
+    <p class="intro">Pagamento único, sem mensalidades. Acesso logo a seguir ao pagamento.</p>
+    <img class="comp-img" width="1000" height="760" loading="lazy" decoding="async" src="img/completo.jpg" alt="As folhas do pacote Completo: Plano de 90 Dias, Jogos, Corpo Ativo, Memórias da Época e Festas do Ano">
+    <div class="pacotes"><div class="pac top"><span class="tag">O mais completo</span><div class="cab"><h3>Completo</h3><div class="pv">34,90 €<small>pagamento único</small></div></div>
+<p class="ds">Para a cabeça, o corpo, as memórias e as festas do ano.</p><ul><li><span><b>8 cadernos, 360 atividades</b> no telemóvel e em PDF</span></li><li><span><b>Os 5 bónus do kit</b></span></li><li><span><b>Plano de 90 Dias:</b> a atividade de cada dia já escolhida</span></li><li><span><b>Jogos para Jogar Juntos:</b> bingo, dominó, memória e mais</span></li><li><span><b>Corpo Ativo:</b> 10 minutos a mexer, sem sair da cadeira</span></li><li><span><b>Memórias da Época:</b> o fado, os Santos Populares, a escola de antigamente</span></li><li><span><b>+5 bónus exclusivos:</b> Festas do Ano (Natal, Ano Novo, Páscoa e mais), O Livro da Minha Vida, 12 Sessões de Grupo, Diplomas e Músicas da Época</span></li></ul><p class="sep">Tudo em separado custaria 72,50 €, e os 5 bónus exclusivos só existem aqui.</p><a class="bt" data-pac="completo" href="https://pay.hotmart.com/U107996632D">Quero o Completo</a></div><div class="pac"><div class="cab"><h3>Dia a Dia</h3><div class="pv">24,90 €<small>pagamento único</small></div></div>
+<p class="ds">O kit, o plano de cada dia e os jogos para jogar juntos.</p><ul><li><span><b>8 cadernos, 360 atividades</b> no telemóvel e em PDF</span></li><li><span><b>Os 5 bónus do kit</b></span></li><li><span><b>Plano de 90 Dias:</b> a atividade de cada dia já escolhida</span></li><li><span><b>Jogos para Jogar Juntos:</b> bingo, dominó, memória e mais</span></li><li class="nao"><span><b>Corpo Ativo:</b> 10 minutos a mexer, sem sair da cadeira</span></li><li class="nao"><span><b>Memórias da Época:</b> o fado, os Santos Populares, a escola de antigamente</span></li><li class="nao"><span><b>+5 bónus exclusivos:</b> Festas do Ano (Natal, Ano Novo, Páscoa e mais), O Livro da Minha Vida, 12 Sessões de Grupo, Diplomas e Músicas da Época</span></li></ul><a class="bt" data-pac="diadia" href="https://pay.hotmart.com/G107996572P">Quero o Dia a Dia</a></div><div class="pac"><div class="cab"><h3>Essencial</h3><div class="pv">14,90 €<small>pagamento único</small></div></div>
+<p class="ds">Os 8 cadernos e os 5 bónus, para começar.</p><ul><li><span><b>8 cadernos, 360 atividades</b> no telemóvel e em PDF</span></li><li><span><b>Os 5 bónus do kit</b></span></li><li class="nao"><span><b>Plano de 90 Dias:</b> a atividade de cada dia já escolhida</span></li><li class="nao"><span><b>Jogos para Jogar Juntos:</b> bingo, dominó, memória e mais</span></li><li class="nao"><span><b>Corpo Ativo:</b> 10 minutos a mexer, sem sair da cadeira</span></li><li class="nao"><span><b>Memórias da Época:</b> o fado, os Santos Populares, a escola de antigamente</span></li><li class="nao"><span><b>+5 bónus exclusivos:</b> Festas do Ano (Natal, Ano Novo, Páscoa e mais), O Livro da Minha Vida, 12 Sessões de Grupo, Diplomas e Músicas da Época</span></li></ul><a class="bt" data-pac="essencial" href="https://pay.hotmart.com/D107781573E?checkoutMode=10">Quero o Essencial</a></div></div>
+    <p class="pac-rod">Pagamento seguro · MB WAY, Multibanco ou cartão · 15 dias para experimentar</p>
+  </div>
+</section>
+
+<!-- 11. GARANTIA -->
 <section class="garantia">
   <div class="w">
-    <div class="selo-g">PARA EXPERIMENTAR<b>15</b>DIAS</div>
+    <div class="selo-g">Experimenta<b>15</b>dias</div>
     <h2>Se não gostares, devolvemos o dinheiro</h2>
     <p>Tens 15 dias para experimentar. Se não gostares, por qualquer motivo, devolvemos o dinheiro todo, sem perguntas.</p>
   </div>
 </section>
 
-<!-- 9. OFERTA / PRECO: tres pacotes (12/10/2026, decisao do Vini). Precos e checkouts na Hotmart; o Essencial e o kit com os bumps -->
-<section class="preco" id="comprar">
-  <div class="w">
-    <h2 style="text-align:center">Escolhe o teu kit</h2>
-    <p class="intro" style="text-align:center">Pagamento único, sem mensalidades. Acesso logo a seguir ao pagamento.</p>
-    <div class="pacotes"><div class="pac top"><span class="tag">O MAIS COMPLETO</span><div class="cab"><h3>Completo</h3><div class="pv">34,90 €<small>pagamento único</small></div></div>
-<p class="ds">Para a cabeça, o corpo, as memórias e as festas do ano.</p><ul><li class=""><span><b>8 cadernos, 360 atividades</b> no telemóvel e em PDF</span></li><li class=""><span><b>Os 5 bónus do kit</b> </span></li><li class=""><span><b>Plano de 90 Dias:</b> a atividade de cada dia já escolhida</span></li><li class=""><span><b>Jogos para Jogar Juntos:</b> bingo, dominó, memória e mais</span></li><li class=""><span><b>Corpo Ativo:</b> 10 minutos a mexer, sem sair da cadeira</span></li><li class=""><span><b>Memórias da Época:</b> o fado, os Santos Populares, a escola de antigamente</span></li><li class=""><span><b>+5 bónus exclusivos:</b> Festas do Ano (Natal, Ano Novo, Páscoa e mais), O Livro da Minha Vida, 12 Sessões de Grupo, Diplomas e Músicas da Época</span></li></ul><p class="sep">Tudo em separado custaria 72,50 €, e os 5 bónus exclusivos só existem aqui.</p><a class="bt" data-pac="completo" href="https://pay.hotmart.com/U107996632D">Quero o Completo</a></div><div class="pac"><div class="cab"><h3>Dia a Dia</h3><div class="pv">24,90 €<small>pagamento único</small></div></div>
-<p class="ds">O kit, o plano de cada dia e os jogos para jogar juntos.</p><ul><li class=""><span><b>8 cadernos, 360 atividades</b> no telemóvel e em PDF</span></li><li class=""><span><b>Os 5 bónus do kit</b> </span></li><li class=""><span><b>Plano de 90 Dias:</b> a atividade de cada dia já escolhida</span></li><li class=""><span><b>Jogos para Jogar Juntos:</b> bingo, dominó, memória e mais</span></li><li class="nao"><span><b>Corpo Ativo:</b> 10 minutos a mexer, sem sair da cadeira</span></li><li class="nao"><span><b>Memórias da Época:</b> o fado, os Santos Populares, a escola de antigamente</span></li><li class="nao"><span><b>+5 bónus exclusivos:</b> Festas do Ano (Natal, Ano Novo, Páscoa e mais), O Livro da Minha Vida, 12 Sessões de Grupo, Diplomas e Músicas da Época</span></li></ul><a class="bt" data-pac="diadia" href="https://pay.hotmart.com/G107996572P">Quero o Dia a Dia</a></div><div class="pac"><div class="cab"><h3>Essencial</h3><div class="pv">14,90 €<small>pagamento único</small></div></div>
-<p class="ds">Os 8 cadernos e os 5 bónus, para começar.</p><ul><li class=""><span><b>8 cadernos, 360 atividades</b> no telemóvel e em PDF</span></li><li class=""><span><b>Os 5 bónus do kit</b> </span></li><li class="nao"><span><b>Plano de 90 Dias:</b> a atividade de cada dia já escolhida</span></li><li class="nao"><span><b>Jogos para Jogar Juntos:</b> bingo, dominó, memória e mais</span></li><li class="nao"><span><b>Corpo Ativo:</b> 10 minutos a mexer, sem sair da cadeira</span></li><li class="nao"><span><b>Memórias da Época:</b> o fado, os Santos Populares, a escola de antigamente</span></li><li class="nao"><span><b>+5 bónus exclusivos:</b> Festas do Ano (Natal, Ano Novo, Páscoa e mais), O Livro da Minha Vida, 12 Sessões de Grupo, Diplomas e Músicas da Época</span></li></ul><a class="bt" data-pac="essencial" href="https://pay.hotmart.com/D107781573E?checkoutMode=10">Quero o Essencial</a></div></div>
-    <p class="pac-rod">🔒 Pagamento seguro · MB WAY, Multibanco ou cartão · 🛡️ 15 dias para experimentar</p>
-  </div>
-</section>
-
-<!-- 10. FAQ -->
+<!-- 12. FAQ -->
 <section class="faq">
   <div class="w">
     <h2>Perguntas frequentes</h2>
     <details><summary>Como recebo o kit?</summary><p>Logo a seguir ao pagamento, recebes o link de acesso. Abre no telemóvel, no tablet ou no computador.</p></details>
     <details><summary>Posso imprimir as vezes que quiser?</summary><p>Sim. Cada atividade e cada caderno têm o PDF pronto a imprimir em folha A4, as vezes que quiseres.</p></details>
     <details><summary>A minha mãe não sabe mexer no telemóvel. Serve na mesma?</summary><p>Serve. Os botões são grandes e basta tocar. E se ela preferir papel, cada atividade tem o PDF para imprimir.</p></details>
+    <details><summary>Serve para usar num lar ou centro de dia?</summary><p>Serve. As atividades estão separadas por capacidade e por nível, com as respostas, e imprimes as vezes que precisares para o grupo.</p></details>
     <details><summary>Precisa de internet?</summary><p>Para abrir as atividades no telemóvel e para descarregar os PDF, sim. Depois de descarregados, os PDF funcionam sem internet.</p></details>
-    <details><summary>Quem pode orientar as atividades?</summary><p>Qualquer familiar, cuidador ou profissional. As instruções são curtas e cada atividade diz o que fazer.</p></details>
     <details><summary>Serve para quem tem Alzheimer ou demência?</summary><p>As atividades são um passatempo para exercitar a mente e adaptam-se ao ritmo de cada pessoa: basta começar pelo Nível 1. Não substituem o acompanhamento médico. Em caso de dúvida, fala com o médico de família.</p></details>
     <details><summary>Serve para quem não tem problemas de memória?</summary><p>Sim. Os Níveis 2 e 3 são um bom desafio para quem quer manter a mente ativa.</p></details>
     <details><summary>Qual é a diferença entre os pacotes?</summary><p>O Essencial tem os 8 cadernos, com 360 atividades, e os 5 bónus. O Dia a Dia junta o Plano de 90 Dias e os Jogos para Jogar Juntos. O Completo tem tudo isso, mais o Corpo Ativo, as Memórias da Época e 5 bónus exclusivos. Se começares pelo Essencial, podes completar depois pagando só a diferença.</p></details>
@@ -477,7 +464,7 @@ body.pacm-on { overflow: hidden; }
 
 </main>
 
-<!-- 11. RODAPE -->
+<!-- 13. RODAPE -->
 <footer>
   <p>Este produto não substitui o parecer de um profissional de saúde. Em assuntos de saúde, consulta sempre o teu médico.</p>
   <p><a href="termos.html">Termos de utilização</a><a href="privacidade.html">Política de privacidade</a></p>
@@ -485,20 +472,18 @@ body.pacm-on { overflow: hidden; }
   <p>© 2026 Recorda Comigo · Pagamento processado pela Hotmart B.V., agente do vendedor</p>
 </footer>
 
-
-
-
-<!-- barra fixa -->
+<!-- janela dos pacotes -->
 <div class="pacm" role="dialog" aria-modal="true" aria-labelledby="pacm-t"><div class="folha">
-  <div class="tt"><h2 id="pacm-t">Escolhe o teu kit</h2><button class="x" type="button" aria-label="Fechar">✕</button></div>
-  <div class="pacotes"><div class="pac top"><span class="tag">O MAIS COMPLETO</span><div class="cab"><h3>Completo</h3><div class="pv">34,90 €</div></div>
+  <div class="tt"><h2 id="pacm-t">Escolhe o teu kit</h2><button class="x" type="button" aria-label="Fechar"><svg class="ico"><use href="#i-x"/></svg></button></div>
+  <div class="pacotes"><div class="pac top"><span class="tag">O mais completo</span><div class="cab"><h3>Completo</h3><div class="pv">34,90 €</div></div>
 <ul><li>8 cadernos com 360 atividades e 5 bónus</li><li>Plano de 90 Dias, Jogos, Corpo Ativo e Memórias</li><li><span><b>+5 bónus exclusivos:</b> Festas do Ano e mais</span></li></ul><a class="bt" data-pac="completo" href="https://pay.hotmart.com/U107996632D">Quero o Completo</a></div>
 <div class="pac lin"><div class="cab"><h3>Dia a Dia</h3><div class="acao"><div class="pv">24,90 €</div><a class="bt" data-pac="diadia" href="https://pay.hotmart.com/G107996572P">Escolher</a></div></div><ul><li>8 cadernos com 360 atividades e 5 bónus</li><li>Plano de 90 Dias e Jogos para Jogar Juntos</li></ul></div>
 <div class="pac lin"><div class="cab"><h3>Essencial</h3><div class="acao"><div class="pv">14,90 €</div><a class="bt" data-pac="essencial" href="https://pay.hotmart.com/D107781573E?checkoutMode=10">Escolher</a></div></div><ul><li>8 cadernos com 360 atividades</li><li>5 bónus, no telemóvel e em PDF</li></ul></div></div>
   <p class="pac-rod">Pagamento único · MB WAY, Multibanco ou cartão · 15 dias para experimentar</p>
 </div></div>
 
-<div class="barra" role="complementary" aria-label="Comprar o Recorda Comigo"><div class="pr"><small style="color:var(--suave)">desde</small>14,90 €<small>IVA incluído</small></div><a class="cta" href="https://pay.hotmart.com/D107781573E?checkoutMode=10" data-checkout>🛒 Comprar agora</a></div>
+<!-- barra fixa -->
+<div class="barra" role="complementary" aria-label="Comprar o Recorda Comigo"><div class="pr"><small>desde</small>14,90 €</div><a class="cta" href="https://pay.hotmart.com/D107781573E?checkoutMode=10" data-checkout>Comprar agora</a></div>
 
 <script>
 /* O link do checkout entra aqui UMA vez (Hotmart, com ?checkoutMode=10 para o bump aparecer).
@@ -522,8 +507,6 @@ var PACOTES = { essencial: CHECKOUT, diadia: "https://pay.hotmart.com/G107996572
     document.querySelectorAll("a.cta").forEach(function (a) { a.href = junta(CHECKOUT); });
     document.querySelectorAll("a[data-pac]").forEach(function (a) { a.href = junta(PACOTES[a.getAttribute("data-pac")]); });
   }
-  var v = document.querySelector(".telemovel video");
-  if (v && matchMedia("(prefers-reduced-motion: reduce)").matches) { v.removeAttribute("autoplay"); v.pause(); }
   /* qualquer botao de comprar abre a escolha do pacote; sem JavaScript, o link leva ao Essencial */
   var pacm = document.querySelector(".pacm");
   var abre = function (e) { e.preventDefault(); pacm.classList.add("on"); document.body.classList.add("pacm-on"); if (window.fbq) { try { fbq("trackCustom", "VerPacotes"); } catch (x) {} } };
@@ -541,7 +524,7 @@ var PACOTES = { essencial: CHECKOUT, diadia: "https://pay.hotmart.com/G107996572
 
 /* Pixel do Meta: carrega ao abrir a pagina, SEM aviso de cookies (Vini, 12/10/2026, "so para a gente testar": o aviso
    escondia ~60% das visitas no painel). Risco registado no log da oferta: a Lei 41/2004 (art. 5.o) pede consentimento
-   previo. Para voltar ao aviso, reverter este commit no recordacomigo/site. */
+   previo. Para voltar ao aviso, reverter o commit 11238b0 no recordacomigo/site. */
 var PIXEL_ID = "1543859487541888";  // dataset "Recorda Comigo" (BM canarimtech), 26/09/2026
 (function () {
   var pixel = false;
@@ -558,26 +541,82 @@ var PIXEL_ID = "1543859487541888";  // dataset "Recorda Comigo" (BM canarimtech)
 })();
 </script>
 <script>
-/* VSL do hero, padrao da 004: abre muda em loop, sem controlos; o botao Ouvir reinicia do zero com som e toca uma vez ate ao fim. */
+/* VSL do hero, padrao da 004 (revisto em 13/10/2026):
+   - abre MUDA, em loop, com o botao grande Ouvir no meio
+   - Ouvir REINICIA do zero e toca uma vez com som
+   - com som: um toque no video PAUSA e outro CONTINUA; o botao do canto silencia e religa
+   - mudou de separador ou bloqueou o ecra: pausa, e ao voltar continua de onde parou
+   - avancar e voltar continuam travados: a barra so mostra o progresso
+   - quem pede menos movimento no sistema (prefers-reduced-motion) nao ve o loop mudo */
 (function () {
+  var menosMovimento = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
   document.querySelectorAll("[data-vsl]").forEach(function (box) {
     var v = box.querySelector("video");
     var fill = box.querySelector(".barra-v i");
     var botao = box.querySelector(".som");
-    var somOn = false;
-    v.addEventListener("pause", function () { if (!v.ended) v.play().catch(function () {}); });
+    var mudo = box.querySelector(".mudo");
+    var somOn = false, pausaDela = false, pausaDoSeparador = false;
+
+    if (menosMovimento) { v.removeAttribute("autoplay"); v.pause(); }
     v.addEventListener("contextmenu", function (e) { e.preventDefault(); });
     v.addEventListener("timeupdate", function () { if (v.duration) fill.style.width = (v.currentTime / v.duration * 100) + "%"; });
-    v.addEventListener("ended", function () { somOn = false; box.classList.remove("tocando"); v.muted = true; v.loop = true; v.currentTime = 0; v.play().catch(function () {}); });
-    botao.addEventListener("click", function () {
+
+    function marcarMudo(sem) {
+      box.classList.toggle("sem-som", sem);
+      mudo.setAttribute("aria-label", sem ? "Ligar o som" : "Silenciar");
+    }
+
+    botao.addEventListener("click", function (e) {
+      e.stopPropagation();
       if (somOn) return;
-      somOn = true;
-      box.classList.add("tocando");
+      somOn = true; pausaDela = false;
+      box.classList.add("tocando"); box.classList.remove("pausado");
+      box.tabIndex = 0;
       v.loop = false;
-      v.muted = false;
+      v.muted = false; marcarMudo(false);
       v.currentTime = 0;
-      v.play().catch(function () { v.muted = true; v.loop = true; somOn = false; box.classList.remove("tocando"); v.play().catch(function () {}); });
-      if (window.fbq) { try { fbq("trackCustom", "VSLOuvir"); } catch (e) {} }
+      v.play().catch(function () {
+        v.muted = true; v.loop = true; somOn = false; box.classList.remove("tocando"); box.removeAttribute("tabindex");
+        if (!menosMovimento) v.play().catch(function () {});
+      });
+      if (window.fbq) { try { fbq("trackCustom", "VSLOuvir"); } catch (x) {} }
+    });
+
+    /* com som: tocar no video pausa ou continua */
+    function alternar() {
+      if (!somOn) return;
+      if (v.paused) { pausaDela = false; v.play().catch(function () {}); }
+      else { pausaDela = true; v.pause(); }
+    }
+    box.addEventListener("click", function (e) { if (somOn && !mudo.contains(e.target)) { e.preventDefault(); alternar(); } });
+    box.addEventListener("keydown", function (e) {
+      if (somOn && e.target === box && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); alternar(); }
+    });
+    v.addEventListener("pause", function () { if (somOn && !v.ended) box.classList.add("pausado"); });
+    v.addEventListener("play", function () { box.classList.remove("pausado"); });
+
+    /* o botao do canto: silencia e religa, sem pausar nem voltar atras */
+    mudo.addEventListener("click", function (e) {
+      e.stopPropagation(); e.preventDefault();
+      v.muted = !v.muted; marcarMudo(v.muted);
+    });
+
+    /* mudou de separador ou bloqueou o ecra: pausa; ao voltar, continua de onde parou */
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) {
+        if (!v.paused) { pausaDoSeparador = true; v.pause(); }
+      } else if (pausaDoSeparador) {
+        pausaDoSeparador = false;
+        if (!pausaDela && (somOn || !menosMovimento)) v.play().catch(function () {});
+      }
+    });
+
+    /* acabou com som: volta ao estado inicial, mudo em loop */
+    v.addEventListener("ended", function () {
+      somOn = false; pausaDela = false;
+      box.classList.remove("tocando", "pausado"); box.removeAttribute("tabindex");
+      v.muted = true; marcarMudo(false); v.loop = true; v.currentTime = 0;
+      if (!menosMovimento) v.play().catch(function () {});
     });
   });
 })();

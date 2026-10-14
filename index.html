@@ -158,8 +158,8 @@ p { margin: 0 0 14px; }
 .bonus-g { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 16px 0 4px; }
 .bonus-g img { border-radius: 6px; border: 1px solid var(--linha); background: #fff; }
 
-/* 10 pacotes (12/10/2026, decisao do Vini): Essencial, Dia a Dia e Completo. Todo botao "Comprar" abre a escolha;
-   o toque no pacote ja abre o checkout dele. O Completo e o Dia a Dia tem checkout sem bump: o MB WAY tambem leva */
+/* 10 preco: um kit so, e todo botao abre o checkout direto (14/10/2026, decisao do Vini: com a janela de 3 pacotes
+   a ida ao checkout caiu de 7,0% para 2,4% dos cliques). Dia a Dia e Completo ficam no pos-compra e no app */
 .preco { padding: 52px 0; background: var(--papel); border-top: 1px solid var(--linha); }
 .preco h2, .preco .intro { text-align: center; }
 .preco .intro { color: var(--suave); }
@@ -218,35 +218,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .depos:focus-visib
 @media (max-width: 400px) { .hero h1 { font-size: 27px; } .hero .sub { font-size: 16px; margin-bottom: 14px; } .hero .rotulo { margin-top: 10px; } }
 @media (max-height: 700px) { .fone { width: min(244px, 54vw); } .hero h1 { font-size: 25px; } .cabeca { padding-top: 10px; } .hero .rotulo { font-size: 12px; } }
 
-/* janela de pacotes: os 3 inteiros no ecra, sem rolar (Vini, 12/10/2026) */
-.pacm { position: fixed; inset: 0; background: rgba(20,28,45,.55); z-index: 30; display: none; align-items: flex-end; justify-content: center; }
-.pacm.on { display: flex; }
-.pacm .folha { background: var(--creme); width: 100%; max-width: 560px; max-height: 92vh; max-height: 96dvh; overflow: auto; border-radius: 20px 20px 0 0; padding: 12px 14px 14px; animation: pacm-sobe .25s ease-out; }
-.pacm .tt { display: flex; align-items: center; justify-content: space-between; margin: 0 0 14px; } .pacm .tt h2 { font-size: 22px; margin: 0; }
-.pacm .x { border: 0; background: #e9e2d6; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; flex: none; display: grid; place-items: center; color: var(--tinta); }
-.pacm .x .ico { width: 18px; height: 18px; }
-.pacm .pacotes { gap: 10px; }
-.pacm .pac { padding: 12px 14px; border-radius: 14px; }
-.pacm .pac.top { padding-top: 16px; }
-.pacm .pac .tag { top: -11px; font-size: 11px; padding: 3px 9px; }
-.pacm .pac h3 { font-size: 21px; } .pacm .pac .pv { font-size: 26px; }
-.pacm .pac ul { margin: 6px 0 10px; } .pacm .pac li { font-size: 14.5px; line-height: 1.3; padding: 2px 0; }
-.pacm .pac.top .bt { padding: 13px; font-size: 17px; }
-.pacm .pac.lin .cab { align-items: center; }
-.pacm .pac.lin h3 { font-size: 19px; }
-.pacm .pac.lin .acao { display: flex; align-items: center; gap: 10px; flex: none; }
-.pacm .pac.lin .pv { font-size: 21px; }
-.pacm .pac.lin .bt { padding: 10px 16px; font-size: 15px; }
-.pacm .pac.lin ul { margin: 6px 0 0; } .pacm .pac.lin li { font-size: 14px; }
-.pacm .pac-rod { font-size: 12.5px; margin: 10px 0 0; }
-@media (max-height: 620px) {
-  .pacm .folha { padding-top: 10px; padding-bottom: 10px; } .pacm .tt { margin-bottom: 9px; } .pacm .tt h2 { font-size: 19px; }
-  .pacm .pacotes { gap: 7px; } .pacm .pac { padding: 10px 12px; } .pacm .pac.top { padding-top: 14px; }
-  .pacm .pac ul { margin: 4px 0 8px; } .pacm .pac li { font-size: 14px; padding: 0; } .pacm .pac.top .bt { padding: 11px; }
-  .pacm .pac.lin .pv { font-size: 19px; } .pacm .pac.lin .bt { padding: 9px 14px; } .pacm .pac.lin ul { margin-top: 4px; } .pacm .pac-rod { margin-top: 8px; }
-}
-@keyframes pacm-sobe { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
-body.pacm-on { overflow: hidden; }
 </style>
 <!-- visitas do painel (funil-montar, rastreio-e-capi 2.6): liga a venda a visita pelo xcod da Hotmart; sem ele, o link sai igual -->
 <script async src="https://painel.labofertas.com/api/lp/script?o=2026-09-lembra-comigo"></script>
@@ -423,16 +394,15 @@ body.pacm-on { overflow: hidden; }
   </div>
 </section>
 
-<!-- 10. PACOTES: tres pacotes (12/10/2026, decisao do Vini). Precos e checkouts na Hotmart; o Essencial e o kit com os bumps -->
+<!-- 10. PRECO: um kit so, o botao abre o checkout com os bumps (14/10/2026, decisao do Vini). O Completo e o Dia a Dia
+     seguem no pos-compra (dia-ativo.html, mais-dia-a-dia.html) e no app, pela diferenca -->
 <section class="preco" id="comprar">
   <div class="w">
-    <h2>Escolhe o teu kit</h2>
+    <h2>Prontas a usar hoje, em casa ou no lar</h2>
     <p class="intro">Pagamento único, sem mensalidades. Acesso logo a seguir ao pagamento.</p>
-    <img class="comp-img" width="1000" height="760" loading="lazy" decoding="async" src="img/completo.jpg" alt="As folhas do pacote Completo: Plano de 90 Dias, Jogos, Corpo Ativo, Memórias da Época e Festas do Ano">
-    <div class="pacotes"><div class="pac top"><span class="tag">O mais completo</span><div class="cab"><h3>Completo</h3><div class="pv">34,90 €<small>pagamento único</small></div></div>
-<p class="ds">Para a cabeça, o corpo, as memórias e as festas do ano.</p><ul><li><span><b>8 cadernos, 360 atividades</b> no telemóvel e em PDF</span></li><li><span><b>Os 5 bónus do kit</b></span></li><li><span><b>Plano de 90 Dias:</b> a atividade de cada dia já escolhida</span></li><li><span><b>Jogos para Jogar Juntos:</b> bingo, dominó, memória e mais</span></li><li><span><b>Corpo Ativo:</b> 10 minutos a mexer, sem sair da cadeira</span></li><li><span><b>Memórias da Época:</b> o fado, os Santos Populares, a escola de antigamente</span></li><li><span><b>+5 bónus exclusivos:</b> Festas do Ano (Natal, Ano Novo, Páscoa e mais), O Livro da Minha Vida, 12 Sessões de Grupo, Diplomas e Músicas da Época</span></li></ul><p class="sep">Tudo em separado custaria 72,50 €, e os 5 bónus exclusivos só existem aqui.</p><a class="bt" data-pac="completo" href="https://pay.hotmart.com/U107996632D?checkoutMode=10">Quero o Completo</a></div><div class="pac"><div class="cab"><h3>Dia a Dia</h3><div class="pv">24,90 €<small>pagamento único</small></div></div>
-<p class="ds">O kit, o plano de cada dia e os jogos para jogar juntos.</p><ul><li><span><b>8 cadernos, 360 atividades</b> no telemóvel e em PDF</span></li><li><span><b>Os 5 bónus do kit</b></span></li><li><span><b>Plano de 90 Dias:</b> a atividade de cada dia já escolhida</span></li><li><span><b>Jogos para Jogar Juntos:</b> bingo, dominó, memória e mais</span></li><li class="nao"><span><b>Corpo Ativo:</b> 10 minutos a mexer, sem sair da cadeira</span></li><li class="nao"><span><b>Memórias da Época:</b> o fado, os Santos Populares, a escola de antigamente</span></li><li class="nao"><span><b>+5 bónus exclusivos:</b> Festas do Ano (Natal, Ano Novo, Páscoa e mais), O Livro da Minha Vida, 12 Sessões de Grupo, Diplomas e Músicas da Época</span></li></ul><a class="bt" data-pac="diadia" href="https://pay.hotmart.com/G107996572P?checkoutMode=10">Quero o Dia a Dia</a></div><div class="pac"><div class="cab"><h3>Essencial</h3><div class="pv">14,90 €<small>pagamento único</small></div></div>
-<p class="ds">Os 8 cadernos e os 5 bónus, para começar.</p><ul><li><span><b>8 cadernos, 360 atividades</b> no telemóvel e em PDF</span></li><li><span><b>Os 5 bónus do kit</b></span></li><li class="nao"><span><b>Plano de 90 Dias:</b> a atividade de cada dia já escolhida</span></li><li class="nao"><span><b>Jogos para Jogar Juntos:</b> bingo, dominó, memória e mais</span></li><li class="nao"><span><b>Corpo Ativo:</b> 10 minutos a mexer, sem sair da cadeira</span></li><li class="nao"><span><b>Memórias da Época:</b> o fado, os Santos Populares, a escola de antigamente</span></li><li class="nao"><span><b>+5 bónus exclusivos:</b> Festas do Ano (Natal, Ano Novo, Páscoa e mais), O Livro da Minha Vida, 12 Sessões de Grupo, Diplomas e Músicas da Época</span></li></ul><a class="bt" data-pac="essencial" href="https://pay.hotmart.com/D107781573E?checkoutMode=10">Quero o Essencial</a></div></div>
+    <img class="comp-img" width="1000" height="760" loading="lazy" decoding="async" src="img/essencial.jpg" alt="O caderno Memória, um dos 8 cadernos do Recorda Comigo, com folhas de atividades">
+    <div class="pacotes"><div class="pac top"><div class="cab"><h3>Recorda Comigo</h3><div class="pv">14,90 €<small>pagamento único</small></div></div>
+<p class="ds">Para exercitar a memória, a atenção e o raciocínio.</p><ul><li><span><b>8 cadernos, 360 atividades</b> no telemóvel e em PDF</span></li><li><span><b>3 níveis em cada caderno</b>, com as respostas</span></li><li><span><b>5 bónus</b> para quem cuida</span></li><li><span><b>Acesso logo a seguir ao pagamento</b></span></li></ul><a class="bt cta" href="https://pay.hotmart.com/D107781573E?checkoutMode=10">Quero as 360 atividades</a></div></div>
     <p class="pac-rod">Pagamento seguro · MB WAY, Multibanco ou cartão · 15 dias para experimentar</p>
   </div>
 </section>
@@ -457,7 +427,6 @@ body.pacm-on { overflow: hidden; }
     <details><summary>Precisa de internet?</summary><p>Para abrir as atividades no telemóvel e para descarregar os PDF, sim. Depois de descarregados, os PDF funcionam sem internet.</p></details>
     <details><summary>Serve para quem tem Alzheimer ou demência?</summary><p>As atividades são um passatempo para exercitar a mente e adaptam-se ao ritmo de cada pessoa: basta começar pelo Nível 1. Não substituem o acompanhamento médico. Em caso de dúvida, fala com o médico de família.</p></details>
     <details><summary>Serve para quem não tem problemas de memória?</summary><p>Sim. Os Níveis 2 e 3 são um bom desafio para quem quer manter a mente ativa.</p></details>
-    <details><summary>Qual é a diferença entre os pacotes?</summary><p>O Essencial tem os 8 cadernos, com 360 atividades, e os 5 bónus. O Dia a Dia junta o Plano de 90 Dias e os Jogos para Jogar Juntos. O Completo tem tudo isso, mais o Corpo Ativo, as Memórias da Época e 5 bónus exclusivos. Se começares pelo Essencial, podes completar depois pagando só a diferença.</p></details>
     <details><summary>Tem mensalidade?</summary><p>Não. Pagas uma vez e não há mais nada a pagar.</p></details>
   </div>
 </section>
@@ -472,27 +441,13 @@ body.pacm-on { overflow: hidden; }
   <p>© 2026 Recorda Comigo · Pagamento processado pela Hotmart B.V., agente do vendedor</p>
 </footer>
 
-<!-- janela dos pacotes -->
-<div class="pacm" role="dialog" aria-modal="true" aria-labelledby="pacm-t"><div class="folha">
-  <div class="tt"><h2 id="pacm-t">Escolhe o teu kit</h2><button class="x" type="button" aria-label="Fechar"><svg class="ico"><use href="#i-x"/></svg></button></div>
-  <div class="pacotes"><div class="pac top"><span class="tag">O mais completo</span><div class="cab"><h3>Completo</h3><div class="pv">34,90 €</div></div>
-<ul><li>8 cadernos com 360 atividades e 5 bónus</li><li>Plano de 90 Dias, Jogos, Corpo Ativo e Memórias</li><li><span><b>+5 bónus exclusivos:</b> Festas do Ano e mais</span></li></ul><a class="bt" data-pac="completo" href="https://pay.hotmart.com/U107996632D?checkoutMode=10">Quero o Completo</a></div>
-<div class="pac lin"><div class="cab"><h3>Dia a Dia</h3><div class="acao"><div class="pv">24,90 €</div><a class="bt" data-pac="diadia" href="https://pay.hotmart.com/G107996572P?checkoutMode=10">Escolher</a></div></div><ul><li>8 cadernos com 360 atividades e 5 bónus</li><li>Plano de 90 Dias e Jogos para Jogar Juntos</li></ul></div>
-<div class="pac lin"><div class="cab"><h3>Essencial</h3><div class="acao"><div class="pv">14,90 €</div><a class="bt" data-pac="essencial" href="https://pay.hotmart.com/D107781573E?checkoutMode=10">Escolher</a></div></div><ul><li>8 cadernos com 360 atividades</li><li>5 bónus, no telemóvel e em PDF</li></ul></div></div>
-  <p class="pac-rod">Pagamento único · MB WAY, Multibanco ou cartão · 15 dias para experimentar</p>
-</div></div>
-
 <!-- barra fixa -->
-<div class="barra" role="complementary" aria-label="Comprar o Recorda Comigo"><div class="pr"><small>desde</small>14,90 €</div><a class="cta" href="https://pay.hotmart.com/D107781573E?checkoutMode=10" data-checkout>Comprar agora</a></div>
+<div class="barra" role="complementary" aria-label="Comprar o Recorda Comigo"><div class="pr"><small>pagamento único</small>14,90 €</div><a class="cta" href="https://pay.hotmart.com/D107781573E?checkoutMode=10" data-checkout>Comprar agora</a></div>
 
 <script>
 /* O link do checkout entra aqui UMA vez (Hotmart, com ?checkoutMode=10 para o bump aparecer).
    A query da pagina (UTM, fbclid) e repassada ao checkout. */
 var CHECKOUT = "https://pay.hotmart.com/D107781573E?checkoutMode=10";
-/* os 3 pacotes (12/10/2026): o Essencial e o kit (com os bumps); Dia a Dia e Completo sem bump. Os tres levam ?checkoutMode=10:
-   e so com ele que a Hotmart serve a pagina personalizada (o banner do topo, 13/10/2026). Os upgrades do pos-compra (?off=)
-   ficam SEM ele de proposito: o banner mostra o preco cheio, e o upgrade cobra so a diferenca */
-var PACOTES = { essencial: CHECKOUT, diadia: "https://pay.hotmart.com/G107996572P?checkoutMode=10", completo: "https://pay.hotmart.com/U107996632D?checkoutMode=10" };
 (function () {
   if (CHECKOUT) {
     /* A Hotmart so guarda src e sck (descarta utm_*), e e deles que o painel liga a venda
@@ -507,18 +462,9 @@ var PACOTES = { essencial: CHECKOUT, diadia: "https://pay.hotmart.com/G107996572
     var q = p.toString();
     var junta = function (u) { return u + (q ? (u.indexOf("?") > -1 ? "&" : "?") + q : ""); };
     document.querySelectorAll("a.cta").forEach(function (a) { a.href = junta(CHECKOUT); });
-    document.querySelectorAll("a[data-pac]").forEach(function (a) { a.href = junta(PACOTES[a.getAttribute("data-pac")]); });
   }
-  /* qualquer botao de comprar abre a escolha do pacote; sem JavaScript, o link leva ao Essencial */
-  var pacm = document.querySelector(".pacm");
-  var abre = function (e) { e.preventDefault(); pacm.classList.add("on"); document.body.classList.add("pacm-on"); if (window.fbq) { try { fbq("trackCustom", "VerPacotes"); } catch (x) {} } };
-  var fecha = function () { pacm.classList.remove("on"); document.body.classList.remove("pacm-on"); };
-  document.querySelectorAll("a.cta").forEach(function (a) { a.addEventListener("click", abre); });
-  pacm.querySelector(".x").addEventListener("click", fecha);
-  pacm.addEventListener("click", function (e) { if (e.target === pacm) fecha(); });
-  addEventListener("keydown", function (e) { if (e.key === "Escape") fecha(); });
   var barra = document.querySelector(".barra");
-  /* a barra some quando os pacotes ja estao no ecra (12/10/2026): ali ela so tapava os cartoes */
+  /* a barra some quando o bloco de preco ja esta no ecra (12/10/2026): ali ela so tapava o cartao */
   var nosPacotes = false, sec = document.getElementById("comprar");
   if (sec && "IntersectionObserver" in window) new IntersectionObserver(function (es) { nosPacotes = es[0].isIntersecting; barra.classList.toggle("on", scrollY > 600 && !nosPacotes); }).observe(sec);
   addEventListener("scroll", function () { barra.classList.toggle("on", scrollY > 600 && !nosPacotes); }, { passive: true });
@@ -538,8 +484,8 @@ var PIXEL_ID = "1543859487541888";  // dataset "Recorda Comigo" (BM canarimtech)
     fbq("init", PIXEL_ID); fbq("track", "PageView");
   }
   ligarPixel();
-  // clique no pacote: evento proprio (o InitiateCheckout e da Hotmart)
-  document.querySelectorAll("a[data-pac]").forEach(function (a) { a.addEventListener("click", function () { if (pixel && window.fbq) fbq("trackCustom", "CliqueComprar", { pacote: a.getAttribute("data-pac") }); }); });  /* InitiateCheckout sai da Hotmart (visitas no checkout); aqui duplicaria */
+  // clique em comprar: evento proprio (o InitiateCheckout e da Hotmart)
+  document.querySelectorAll("a.cta").forEach(function (a) { a.addEventListener("click", function () { if (pixel && window.fbq) fbq("trackCustom", "CliqueComprar", { pacote: "essencial" }); }); });  /* InitiateCheckout sai da Hotmart (visitas no checkout); aqui duplicaria */
 })();
 </script>
 <script>
